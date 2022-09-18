@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>facebook3</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background: rgb(235, 235, 235);
+			font-family: sans-serif;
+		}
+		header{
+			height: auto;
+			width: 100vw;
+			padding: 5px;
+			background: #fff;
+			width: 100vw;
+		}
+		nav{
+			display: flex;
+			justify-content: space-between;
+		}
+		.logo h3{
+			width: 20%;
+			font-size: 30px;
+			padding: 10px 75px;
+			color: #0982eb;
+		}
+		.signin {
+			padding: 10px 75px;
+		}
+		.signin form input{
+			padding: 10px;
+			margin-right: 2px;
+			border-radius: 4px;
+			border: 1px solid lightgrey;
+			outline: none;
+		}
+		.signin form input::placeholder{
+			color: lightgrey;
+		}
+		.signin form button{
+			background: #0982eb;
+			padding: 10px;
+			border: none;
+			border-radius: 4px;
+			color: #fff;
+		}
+		.signin form a{
+			text-decoration: none;
+			font-size: 14px;
+			color: #0982eb;
+
+		}
+
+		main{
+
+		}
+		.card{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 500px;
+			height: 285px;
+			border-radius: 5px;
+			background: #fff;
+			box-shadow: 0 0 4px grey;
+			/*padding: 15px;*/
+		}
+		.card h2{
+			color: rgb(60, 60, 60);
+			font-weight: bolder;
+			text-transform: capitalize;
+			letter-spacing: 1px;
+			margin: 15px;
+
+		}
+		.card p{
+			color: grey;
+			/*font-weight: ;*/
+			margin: 15px 15px 20px 15px;
+		}
+		.card input{
+			padding: 15px 10px;
+			margin:0  15px 15px;
+			width: 93%;
+			border-radius: 5px;
+			border: 1px solid lightgrey;
+		}
+		.card input::placeholder{
+			color: lightgrey;
+		}
+		.card input:focus{
+			outline: 2px solid #0985eb;
+		}
+		.hrule{
+			height: 2px;
+			width: 100%;
+			background: lightgrey;
+			margin: 20px 0;
+		}
+		.hrule1{
+			height: 1px;
+			width: 100%;
+			background: lightgrey;
+			margin: 10px 0 15px;
+		}
+		.card button{
+			padding: 7px 25px;
+			border-radius: 7px;
+			border: none;
+			font-size: 17px;
+			float: right;
+			margin-right: 20px;
+		}
+		.cnlbtn{
+			color: grey;
+		}
+		.card .srchbtn{
+			background: #0982eb;
+			color: #fff;
+		}
+
+		@media (min-width: 811px) and (max-width: 1000px){
+			.signin {
+				padding: 10px 20px;
+			}
+			.logo h3{
+				padding: 10px 30px;
+				/*line-height: 80px;*/
+				/*font-size: 2.8em;*/
+			}
+
+		}
+
+		@media (min-width: 601px) and (max-width: 810px){
+			.logo h3{
+				padding: 10px 25px;
+				line-height: 80px;
+				font-size: 2.8em;
+			}
+			.signin {
+			padding: 10px 35px;
+		}
+		.signin form input{
+				margin: 3px 0;
+			}
+			.card{
+				top: 50%;
+			}
+		}
+
+
+		@media (min-width: 441px) and (max-width: 600px) {
+			nav{
+			justify-content: space-between;
+			align-items: center;
+		}
+			.logo h3{
+				padding: 10px ;
+				/*line-height: 120px;*/
+				font-size: 2.5em;
+			}
+			.signin {
+			padding: 10px ;
+		}
+			.signin form input:nth-child(2){
+				margin: 8px 0;
+			}
+			.card{
+				width: 400px;
+				top: 55%;
+			}
+		}
+		@media (max-width: 440px){
+			nav{
+				flex-direction: column;
+			justify-content: center;
+			}
+			.logo h3{
+				padding: 5px 20px;
+				font-size: 3em;
+			}
+			.signin {
+			padding: 0 20px ;
+			display: flex;
+			flex-direction: column;
+			}
+			.signin form input{
+
+			}
+			.signin form a{
+				display: none;
+			}
+			.card{
+				width: 90vw;
+				top: 55%;
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo"><h3>facebook</h3></div>
+			<div class="signin">
+				<form>
+					<input type="text" name="name" placeholder="Email or Phone">
+					<input type="password" name="password" placeholder="Passowrd">
+					<button>Log In</button>
+					<a href="https://www.facebook.com"> forget password?</a>
+				</form>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="card">
+			<h2>Find your account</h2>
+			<div class="hrule"></div>
+			<p>Please enter your email address or mobile number to search for your account</p>
+			<form>
+				<input type="tel" name="phone" placeholder="Mobile number">
+				<div class="hrule1"></div>
+				<button class="srchbtn">Search</button>
+				<button class="cnlbtn">Cancel</button>
+			</form>
+		</div>
+	</main>
+
+</body>
+</html>

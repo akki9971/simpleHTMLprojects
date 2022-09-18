@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>file upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        form {
+            width: 50%;
+            height: 500px;
+            background: cornsilk;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        form h1 {
+            font-size: 30px;
+            color: darkblue;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        form label {
+            display: block;
+            width: 60%;
+            margin-left: 30px;
+            margin-bottom: 0;
+            padding: 5px;
+        }
+
+        form input {
+            display: block;
+            width: 70%;
+            margin-left: 30px;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        #password1,
+        #password2 {
+            display: inline-block;
+        }
+
+        img {
+            background: aquamarine;
+            top: 9px;
+            left: -32px;
+            position: relative;
+            padding: 0 2px;
+            width: 27px;
+            height: 27px;
+            cursor: pointer;
+
+        }
+
+        form button {
+            padding: 5px 25px;
+            background: rgb(17, 77, 243);
+            margin-left: 30px;
+            color: antiquewhite;
+            border: none;
+            margin: 10px 70px;
+
+        }
+
+        .box img {
+            width: 200px;
+            height: 150px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return validation()" id="myform">
+        <div class="form">
+            <h1>Image preview</h1>
+            <label> Full name</label>
+            <input type="text" id="fname" name="fname">
+
+            <label> Email Id</label>
+            <input type="text" id="mailid" name="mailid">
+
+            <label>Password</label>
+            <input type="password" id="password1" name="password1">
+            <!-- <img src="images/view.png" onmouseenter="showme(document.getElementById('password1'))"
+                onmouseleave="hideme(document.getElementById('password1'))" id="img1" /> -->
+            <img src="images/view.png" id="img1" />
+
+            <label>Confirm Password</label>
+            <input type="password" id="password2" name="password2">
+            <!-- <img src="images/view.png" onmouseenter="showme(document.getElementById('password2'))"
+                onmouseleave="hideme(document.getElementById('password2'))" id="img2" /> -->
+            <img src="images/view.png" id="img2" />
+
+
+            <input type="file"
+                onchange="document.getElementById('filename').src = window.URL.createObjectURL(this.files[0])">
+
+            <button type="submit">Submit</button>
+        </div>
+        <div class="img">
+            <div class="box">
+                <img id="filename" alt="your image" />
+                <input type="text" list="cars" />
+                <datalist id="cars">
+                    <option>Volvo</option>
+                    <option>Saab</option>
+                    <option>Mercedes</option>
+                    <option>Audi</option>
+                </datalist>
+            </div>
+        </div>
+
+    </form>
+
+
+    <script>
+        var nameExp = /^[a-zA-Z]+$/;
+        var mailExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        var passwordExp = /^[a-zA-Z]\w{3,14}$/;
+
+        function validation() {
+
+            var x = document.getElementById('fname').value;
+
+            if (x == "") {
+                alert("Name is reqired.");
+                document.getElementById('fname').focus();
+                return false;
+            }
+
+            if (!x.match(nameExp)) {
+                alert("Name should be chracter only.");
+                document.getElementById('fname').focus();
+                return false;
+            }
+
+            var x = document.getElementById('mailid').value;
+            if (x == "") {
+                alert("Email is reqired.");
+                document.getElementById('mailid').focus();
+                return false;
+            }
+
+            if (!x.match(mailExp)) {
+                alert("Please enter valid mail id.");
+                document.getElementById('mailid').focus();
+                return false;
+            }
+
+            var x = document.getElementById('password1').value;
+            if (x == "") {
+                alert("Password is reqired.");
+                document.getElementById('password1').focus();
+                return false;
+            }
+
+            if (!x.match(passwordExp)) {
+                alert("Please enter atleast 3 characters.");
+                document.getElementById('password1').focus();
+                return false;
+            }
+
+            var y = document.getElementById('password2').value;
+            if (x == "") {
+                alert("Password is reqired.");
+                document.getElementById('password2').focus();
+                return false;
+            }
+
+            if (!x.match(passwordExp)) {
+                alert("Please enter atleast 3 characters.");
+                document.getElementById('password2').focus();
+                return false;
+            }
+            if (x != y) {
+                alert("Password should be match.");
+                document.getElementById('password2').focus();
+                return false;
+            }
+        }
+// ---------- show /hide password ---------
+
+
+        // function showme(showpsd) {
+        //     showpsd.setAttribute("type", "text");
+
+        // }
+
+        // function hideme(hidepsd) {
+        //     hidepsd.setAttribute("type", "password");
+
+        // }
+
+
+
+        // document.getElementById('getimg').addEventListener("click", getimage);
+        // function getimage(e){
+        //     e.preventDefault();
+
+        // var form = document.getElementById('myform');
+        // var formData = new FormData(form);
+        // console.log(formData.get('image').RelativePath);
+        // // document.getElementById('filename').value=formData.get('image').name;
+        // // document.getElementsByClassName('box')[0].innerHTML=`<img src="images/${formData.get('image').name}" alt="upload">`;
+        // }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#img1').mouseenter(function () {
+                $('#password1').attr('type', 'text')
+            });
+            $('#img1').mouseleave(function () {
+                $('#password1').attr('type', 'password')
+            });
+            $('#img2').mouseenter(function () {
+                $('#password2').attr('type', 'text')
+            });
+            $('#img2').mouseleave(function () {
+                $('#password2').attr('type', 'password')
+            });
+        });
+    </script>
+</body>
+
+</html>

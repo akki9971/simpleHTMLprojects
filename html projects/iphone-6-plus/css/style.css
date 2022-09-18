@@ -1,0 +1,262 @@
+*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: sans-serif, Courier, verdana;
+			}
+			body{
+				background-image: url(../images/old-wooden-bg.jpg);				
+				background-repeat: no-repeat;
+				background-size: 100% 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+			}
+
+			.iphone {
+				height: 474px;
+				width: 233px;
+				background: #1c1c1c;
+				border-radius: 40px;
+				margin:2% ;
+				/*left: 50%;
+				transform: translateX(-50%);*/
+				margin-top: 3%;
+				position: relative;
+				box-shadow: 0 0 5px 1px #fff;
+				
+
+			}
+			.camera{
+				width: 8px;
+				height: 8px;
+				background: #3c3c3c;
+				border-radius: 50%;
+				position: absolute;
+				left: 50%;
+				top: 3%;
+				transform: translateX(-50%);
+				box-shadow: 0 0 1px 1px rgb(225, 225, 225),
+							 0 0 1px 1px rgb(225, 225, 225) inset;
+
+			}
+
+			.sensor_part {
+				position: absolute;
+				margin-top: 14%;
+				display: inline-flex;
+				left: 50%;
+				transform: translateX(-70%);
+			}
+			 .sensor	{
+				width: 5px;
+				height: 5px;
+				background: #fff;
+				box-shadow: 0 0 1px 1px rgb(225, 225, 225),
+							 0 0 1px 1px rgb(225, 225, 225) inset;
+				border: 1px solid grey;
+				border-radius: 50%;				
+				margin-right: 15px;
+			}
+
+			 .speaker{
+				width: 35px;
+				height: 2px ;
+				background: #black;
+				border: 1px solid grey;
+				box-shadow: 0 0 1px 1px rgb(225, 225, 225),
+							 0 0 1px 1px rgb(225, 225, 225) inset;
+				border-radius: 5px;
+				margin-top: 2px;
+			}
+
+				/*-----screen-----*/
+
+			.screen{
+				width: 212px;
+				height: 362px;
+				background-image: url(../images/wallpaper1.jpg);		
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				position: absolute;
+				left: 50%;
+				top: 12%;
+
+				transform: translateX(-50% );				
+			}
+
+					/*--notification panel---*/
+
+			.upperpanel{
+				width:100% ;
+				height: 13px;
+				background: rgba(225, 225, 225, 0.2);
+				display: flex;
+				justify-content: space-between;
+				
+			}
+			.networkpart1 {
+				align-items: left;
+				display: inline-block;
+
+			}
+
+			.network {
+				
+				margin-left: 5px;
+				
+			}
+			.signal {
+				
+				width: 6px;
+				height: 6px;
+				background: #fff;
+				display: inline-block;
+				/*position: absolute;*/
+				margin-right: -3px;
+				margin-bottom: 5px;	
+				border-radius: 50%;
+			}
+			/*--------wifi part----------*/
+
+			.wifi{
+				margin-top: -115px;
+				margin-left: -51px;
+			}
+
+			.wifitrial{
+				transform: scale(0.04) rotate(45deg);
+				display: inline-flex;
+
+			}
+
+.line{
+	width: 200px;
+	height: 200px;
+	border-top-left-radius: 100%;
+	background: #fff;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+.line1{
+	width: 170px;
+	height: 170px;
+	border-top-left-radius: 100%;
+	background: #2d92ef;
+	margin-top: 30px;
+	margin-left: -170px;
+}
+.line2{
+	width: 140px;
+	height: 140px;
+	border-top-left-radius: 100%;
+	background:#fff;
+
+	margin-top: 60px;
+	margin-left: -140px;
+}
+.line3{
+	width: 110px;
+	height: 110px;
+	border-top-left-radius: 100%;
+	background: #2d92ef;
+	margin-top: 90px;
+	margin-left: -110px;
+}
+.line4{
+	width: 80px;
+	height: 80px;
+	border-top-left-radius: 100%;
+	background:#fff;
+
+	margin-top: 120px;
+	margin-left: -80px;
+}
+.line5{
+	width: 50px;
+	height: 50px;
+	border-top-left-radius: 100%;
+	background: #2d92ef;
+	margin-top: 150px;
+	margin-left: -50px;
+}
+.line6{
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background:#fff;
+
+	margin-top: 174px;
+	margin-left: -26px;
+}
+
+
+
+			/*----------wifi end-----------*/
+			.time{
+				font-size: 10px;
+				color: #fff;
+				font-weight: 300;
+				letter-spacing: 1px;
+				position: absolute;
+				left: 38%;
+			}
+			.battery{
+				width: 20px;
+				height: 8px;
+				border: 1px solid #C4B6B6;
+				border-radius: 1px;
+				background: linear-gradient(to right, #ecdbba 70%, transparent 20%);
+				position: absolute;
+				right: 3%;
+				margin-top: 2px;
+			}
+			.battery::after {
+    			content: '';
+    			width: 3px;
+    			height: 4px;
+   				background: #C4B6B6;
+    			position: absolute;
+    			margin-left: 18px;
+    			margin-top: 1px;
+    			border-radius: 2px;
+    		}
+
+
+    		
+
+
+
+
+			
+				/*---lower  sticky   part  -----*/
+
+			.lowerpart {
+				width: 100%;
+				height: 61px;
+				background: rgba(255, 255, 255, 0.5);
+				position: absolute;
+				bottom: 0;
+				display: inline-flex;
+				justify-content: space-evenly;
+				
+			}
+
+
+
+
+			.button{
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				border: 2px solid #3b3b3b;
+				position: absolute;
+				bottom: 2%;
+				left: 50%;
+				transform: translateX(-50%);
+				box-shadow: 0 0 1px 1px rgb(225, 225, 225),
+							 0 0 1px 1px rgb(225, 225, 225) inset;
+			}
+

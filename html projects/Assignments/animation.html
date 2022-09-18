@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animation</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		background: #0982eb;		
+	}
+	.section_one{
+		width: 65vw;
+		/*height: 100vh;*/
+		background: grey;
+	}
+	.section_two{
+		width: 30vw;
+		
+		/*height: 100vh;*/
+
+	}
+	.part1{
+		width: 200px;
+		height: 200px;
+		background: white;
+		border-radius: 5px;
+		box-shadow: 0 0 5px grey;
+		animation: animate 10s linear infinite;
+		position: absolute;
+		top: 10px;
+	}
+	.part2{
+		width: 300px;
+		height: 300px;
+		border: 2px solid gold;
+		box-shadow: 0 0 5px gold;
+		background: #fff;
+		position: absolute;
+		right: 40px;
+		top: 150px;
+		}
+		.part2 h1{
+			font-size: 32px;
+			text-align: center;
+			color: gold;
+			margin: 25px;
+			text-transform: uppercase;
+		}
+	.para	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 26px;
+		font-weight: 700;
+		font-family: sans-serif;
+	}
+	.para1{
+		opacity: 0;
+		animation: anime1 10s infinite;
+	}
+	.para2{
+		color: red;
+		opacity: 0;
+		animation: anime2 10s infinite;
+
+	}
+	.para3{
+		color: blue;
+		opacity: 0;
+		animation: anime3 10s infinite;
+	}
+	.para4{
+		color: green;
+		opacity: 0;
+		animation: anime4 10s infinite;
+	}
+
+
+	@keyframes animate{
+		0%{
+			left: 0;
+			top: 0;
+			border: 8px solid black;
+
+		}
+		25%{
+			left: 420px;
+			top: 0;
+			border: 8px solid red;
+
+		}
+		50%{
+			left: 420px;
+			top: 300px;
+			border: 8px solid blue;
+
+		}
+		75%{
+			left: 0;
+			top: 300px;
+			border: 8px solid green;
+		}
+		100%{
+			left: 0;
+			top: 0;
+			border: 8px solid black;
+		}
+	}
+
+	@keyframes anime1{
+		0%{
+			opacity: 1;
+		}
+		24%{
+			opacity: 1;
+		}
+		25%{
+			opacity: 0;
+		}
+		
+
+	}
+	@keyframes anime2{
+		
+		25%{
+			opacity: 0;
+		}
+		26%{
+			opacity: 1;
+		}
+		49%{
+			opacity: 1;
+		}
+		50%{
+			opacity: 0;
+		}
+		
+	}
+	@keyframes anime3{
+		50%{
+			opacity: 0;
+		}
+		51%{
+			opacity: 1;
+		}
+		74%{
+			opacity: 1;
+		}
+		75%{
+			opacity: 0;
+		}
+		
+	}
+	@keyframes anime4{
+		75%{
+			opacity: 0;
+		}
+		76%{
+			opacity: 1;
+		}
+		99%{
+			opacity: 1;
+		}
+		100%{
+			opacity: 0;
+		}
+		
+	}
+
+	</style>
+	
+</head>
+<body>
+	<section class="section_one">
+		<div class="part1">
+			<div class="para1 para">America</div>
+			<div class="para2 para">Kajakastan</div>
+			<div class="para3 para">Azerbaizan</div>
+			<div class="para4 para">Purtagal</div>
+		</div>
+	</section>
+
+	<section class="section_two">
+		<div class="part2">
+			<h1>Some Countries</h1>
+			<div class="para1 para">America</div>
+			<div class="para2 para">Kajakastan</div>
+			<div class="para3 para">Azerbaizan</div>
+			<div class="para4 para">Purtagal</div>
+		</div>
+	</section>
+</body>
+</html>

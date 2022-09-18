@@ -1,0 +1,276 @@
+.upperpanel{
+	display: flex;
+	justify-content: space-between;
+	margin: 3px 10px;
+
+}
+.time{
+	font-size: 10px;
+	color: #fff;
+	margin:2px 0 0 4px ;
+	font-family: sans-serif;
+
+}
+
+
+.netpart{
+	display: flex;
+	justify-content: space-evenly;
+	width: 50px;
+	height: 15px;
+	align-items: center;
+	/*position: relative;
+	right: 5px;
+	top: 5px;*/
+}
+ 
+ /*---4g network ------*/
+
+ .network{
+			position: relative;
+			top: -2px;
+			right: 4px;
+		}
+		.bars{
+			display: inline-flex;
+			transform: scale(0.35);
+		}
+		.bar1{
+			width: 5px;
+			height: 8px;
+			background-color: silver;
+			margin: 0 0 0 3px;		}
+
+		.bar2{
+			width: 5px;
+			height: 12px;
+			background-color: silver;
+			margin: -4px 0 0 2px;
+		}
+		.bar3{
+			width: 5px;
+			height: 16px;
+			background-color: silver;
+			margin: -8px 0 0 2px;
+		}
+		.bar4{
+			width: 5px;
+			height: 20px;
+			background-color: silver;
+			margin: -12px 0 0 2px;
+		}
+
+
+		/*------ wifi networkss ---------*/
+
+		.wifibox{
+			position: relative;
+			top: -6px;
+			right: 21px;
+
+		}
+		.wifi{
+			transform: scale(0.15);
+		}
+		.sig1{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border: 10px solid;
+			border-color: silver transparent transparent transparent;
+			position: absolute;
+			
+		}
+		.sig2{
+			width: 70px;
+			height:70px;
+			border-radius: 50%;
+			border: 10px solid;
+			border-color: silver transparent transparent transparent;
+			position: absolute;
+			
+			margin: 15px 0 0 15px;
+
+		}
+		.sig3{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: 10px solid;
+			border-color: silver transparent transparent transparent;
+			position: absolute;
+			
+			margin: 30px 0 0 30px;
+		}
+		.sig4{
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: silver;
+			position: absolute;
+			
+			margin: 45px 0 0 46px;
+		}
+
+		/*-------- battery part ---*/
+
+		.battery_main{
+			position: absolute;
+
+			top: 0;
+			right: -8px;
+			transform: scale(0.3);
+		}
+		.battery{
+			width: 50px;
+			height: 20px;
+			padding: 0 4px;
+			font-size: 13px;
+			color: grey;
+			font-family: sans-serif;
+			background-image: linear-gradient(to right, #fff 70%, transparent 20%);
+			border: 3px solid silver;
+			border-radius: 5px;
+		}
+		.battery::after{
+			content: '';
+			position: absolute;
+			width: 5px;
+			height: 8px;
+			border-radius: 0 2px 2px 0;
+			background-color: silver;
+			right: -3px;
+			top: 6px;
+		}
+
+
+		/*--------- apps starts --------*/
+
+.appspart{
+margin: 35px 10px;
+}
+.row1{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-left: 8px;
+	margin-top: 15px;
+}
+.col1{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-row-gap: 15px;
+}
+.app{
+	width: 35px;
+	height: 35px;
+	border-radius: 10px;
+	position: relative;
+}
+.app2{
+	width: 80px;
+	height: 85px;
+	border-radius: 10px;
+	position: relative;
+
+
+}
+.iconame{
+	font-size: 7px;
+	color: #fff;
+	position: absolute;
+	bottom: -9px;
+	left: 50%;
+	transform: translateX(-50%);
+	vertical-align: bottom;
+}
+
+
+
+.lowerpart{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 5px;
+	padding: 8px 5px 8px 11px;
+	margin: 0 9px;
+	position: relative;
+	bottom: -27px;
+	background: rgba(5, 5, 5, 0.3);
+	border-radius: 20px;
+}
+
+/*--------- app icons-------- */
+.fa, .fas, .fab{
+	font-size: 24px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.fa-tv{
+	font-size: 20px;
+	color: rgb(187, 153, 153);
+}
+
+/* ---- apps designing-------- */
+
+.myapp1{
+	background: linear-gradient(rgb(99, 95, 95),grey);
+}
+.myapp2{
+	background: linear-gradient(45deg,rgb(156, 155, 155),rgb(197, 190, 190));
+}
+.myapp3{
+	background: linear-gradient(rgb(99, 95, 95),rgb(73, 66, 66));
+}
+.myapp4{
+	background: linear-gradient(-20deg,rgb(124, 119, 119) 50%,rgb(73, 66, 66) 50%);
+}
+.myapp5{
+	background: radial-gradient(rgb(44, 42, 42),rgb(110,110,110));
+}
+.myapp6{
+	background: linear-gradient(120deg, tomato, red);
+}
+.myapp7{
+	background: linear-gradient(rgb(141 147 251), rgb(0 101 173));
+}
+.myapp8{
+	background: linear-gradient(#fff, #aaa);
+}
+.myapp9{
+	background: linear-gradient(rgb(141 147 251), rgb(0 101 173));
+}
+.myapp10{
+	background: linear-gradient( rgb(0 101 173), rgb(141 147 251));	
+}
+.myapp11{
+	background: linear-gradient(#fff, #aaa);	
+}
+.myapp12{
+	background: linear-gradient(#fff, #aaa);
+}
+.myapp13{
+	background: linear-gradient(#fff, #aaa);	
+}
+.myapp14{
+	background: linear-gradient(#fff, #aaa);
+}
+.myapp15{
+	background: linear-gradient(120deg, tomato, red);
+}
+.myapp16{
+	background: linear-gradient(rgb(71, 194, 71), rgb(38, 245, 38));
+}
+.myapp17{
+	background: linear-gradient(#fff, #aaa);
+}
+.myapp18{
+	background: linear-gradient(rgb(38, 245, 38), rgb(71, 194, 71));
+}
+.myapp19{
+	background: linear-gradient(120deg, tomato, red);
+}
+
+
+

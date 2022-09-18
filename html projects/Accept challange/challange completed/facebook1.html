@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width initial-scale=1">
+	<title>facebook-1</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.mainpart{
+			display: flex;
+			justify-content: space-evenly;
+			/*align-items: center;*/
+			padding: 150px 180px;
+			background: #f0f2f5;
+		}
+		.intro{
+			margin: 50px 50px 100px 20px;
+		}
+		.intro h1{
+			color: #0982eb;
+			font-size: 3.5em;
+			font-weight: 600;
+			font-family: tahoma;
+		}
+		.intro p{
+			font-size: 24px;
+			line-height: 28px;
+			font-family: helvetica ;
+			font-weight: 500;
+		}
+		.form{
+			display: block;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 0 10px 2px #e8e8e4;
+			width: 400px;
+			height: 350px;
+			padding: 15px;
+
+		}
+		.formpart input{
+			width: 100%;
+			padding: 15px;
+			margin-bottom: 15px;
+			border-radius: 6px;
+			outline: none;
+			border: 1px solid #b7b7a4;
+			box-shadow: 0 0 1px 1px #f0f2f5;
+		}
+		.formpart input::placeholder{
+			color: #b7b7a4;
+		}
+		.formpart input:focus{
+			border: 2px solid lightskyblue;
+		}
+		.login{
+			width: 100%;
+			background: #0982eb;
+			outline: none;
+			border: none;
+			border-radius: 4px;
+			padding: 10px;
+			font-family: sans-serif;
+			font-size: 16px;
+			color: #fff;
+		}
+		.formpart a{
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			color: #0982eb;
+			margin: 15px 0;
+		}
+		.line{
+			width: 100%;
+			margin: 25px 0;
+			border-bottom: 1px solid lightgray;
+		}
+		.signup{
+			padding: 10px;
+			border-radius: 4px;
+			border: none;
+			color: #fff;
+			font-size: 16px;
+			font-family: sans-serif;
+			background: #42b72a;
+			width: 60%;
+			margin: 1px 20%;
+		}
+		.create{
+			text-align: center;
+			margin-top: 15px;
+			font-size: 12px;
+			color: #6b705c;
+		}
+
+		@media (min-width: 450px) and (max-width: 760px){
+			.mainpart{
+				padding: 30px 40px;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.intro{
+				width: 60vw;
+				margin: 25px auto;
+			}
+		}
+
+		@media (max-width: 449px){
+			.mainpart{
+				padding: 5px 30px;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.intro{
+				/*width: 60vw;*/
+				margin: 20px auto;
+			}
+			
+			.form{
+				width: 90vw;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<section class="mainpart">
+		<div class="intro">
+			<h1>facebook</h1>
+			<p>Facebook hepls you connect and share with the people in your life.</p>
+		</div>
+		<div class="formpart">
+			<div class="form">
+				<form action="submit" autocomplete="off">
+					<input type="text" name="username" placeholder="Email address or phone number">
+					<input type="password" name="password" placeholder="Password">	
+					<button class="login">Log In</button>
+					<a href="#">forgotten password?</a>
+					<div class="line"></div>
+					<button class="signup">create new account</button>
+				</form>
+			</div>
+			<p class="create"><strong>Create a page</strong>for a celebrity, band or business</p>			
+		</div>
+		
+	</section>
+	<section class="footer">
+		
+	</section>
+</body>
+</html>

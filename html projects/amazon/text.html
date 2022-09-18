@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      .hero-1{
+        position: relative;
+        top: -200px;
+      }
+    </style>
+    </style>
+</head>
+<body>
+  <header class="container-fluid bg-amazon-header" id="top-header">
+    <nav class="navbar navbar-expand-lg py-1 navbar-light text">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white " style="font-family: 'Caveat', cursive;font-size:32px;" href="#">amazon.in</a>
+        <a class="navbar-brand text-white small fw-bold" href="#">
+          <div class="x-small mb_-1 ms-3">Hello</div><i class="fas fa-map-marker-alt"></i> Select Your Address
+        </a>
+
+        <form class="d-flex w-50">
+          <div class="nav-item  dropdown">
+            <a class="nav-link dropdown-toggle rounded-start bg-light text-dark" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              All
+            </a>
+            <ul class="dropdown-menu small" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">All categories</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Deals</a></li>
+              <li><a class="dropdown-item" href="#">Alexa Skills</a></li>
+              <li><a class="dropdown-item" href="#">Amazon Devices</a></li>
+              <li><a class="dropdown-item" href="#">Amazon Fashion</a></li>
+              <li><a class="dropdown-item" href="#">Amazon Fresh</a></li>
+              <li><a class="dropdown-item" href="#">Amazon Pentry</a></li>
+              <li><a class="dropdown-item" href="#">Appliances</a></li>
+              <li><a class="dropdown-item" href="#">Apps &amp; Games</a></li>
+              <li><a class="dropdown-item" href="#">Baby</a></li>
+              <li><a class="dropdown-item" href="#">Beauty</a></li>
+              <li><a class="dropdown-item" href="#">Books</a></li>
+              <li><a class="dropdown-item" href="#">Car &amp; Motorbike</a></li>
+              <li><a class="dropdown-item" href="#">Clothing &amp; Accessories</a></li>
+              <li><a class="dropdown-item" href="#">Collectible</a></li>
+              <li><a class="dropdown-item" href="#">Electronics</a></li>
+              <li><a class="dropdown-item" href="#">Furniture</a></li>
+              <li><a class="dropdown-item" href="#">Gift Cards</a></li>
+            </ul>
+          </div>
+          <input class="form-control rounded-0 pe-5" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success border-0 bg-orange text-dark rounded-0 rounded-end" type="submit"><i
+              class="fas fa-search"></i></button>
+        </form>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/images/india.png" alt="india-flag" width="26px" height="26px">
+          </a>
+          <ul class="dropdown-menu px-3" aria-labelledby="navbarDropdown">
+            <li><input type="radio" checked> English - EN</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><input type="radio"> Hindi </li>
+            <li><input type="radio"> Marathi </li>
+            <li><input type="radio"> Talugu </li>
+            <li><input type="radio"> Gujrati </li>
+            <li><input type="radio"> Bengauli </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>You are shopping on amazon.in</li>
+            <li><a href="#" class="text-center">Change country/region</a></li>
+
+          </ul>
+        </div>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white small fw-bold" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="x-small mb_-1">Hello, sign in</div>Account &amp; lists
+          </a>
+        </div>
+        <a class="navbar-brand small text-white fw-bold" href="#">
+          <div class="fs-6 mb_-1 x-small">Returns</div>&amp; orders
+        </a>
+        <a class="navbar-brand small fw-bold text-white" href="#"><i class="fas fa-shopping-cart fa-2x"></i> Cart</a>
+
+    </nav>
+  </header>
+  <nav class="navbar navbar-expand-lg py-0 navbar-light bg-amazon-nav">
+    <div class="container-fluid ">
+      <button class="btn bg-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white small me-1 "></i> All
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" aria-current="page" href="#">Mobiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">Best Sellers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">Fashion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">Electronics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">Customer Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">Amazon Pay</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">Prime</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">Today's deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white small fw-bold" href="#">New releases</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleControls" class="carousel slide page-banners" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/banners/alexa-home.jpg" class="d-block w-100" alt="banner">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/banners/banner-4.jpg" class="d-block w-100" alt="banner">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/banners/banner-3.jpg" class="d-block w-100" alt="banner">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/banners/banner-2.jpg" class="d-block w-100" alt="banner">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <section class="hero-cards hero-1">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-md bg-white p-3 mx-3">
+          <h4>Daily Essentials</h4>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-1-img/cleaning.jpg" alt="Cleaning">
+              <p class="x-small fw-bold py-1">Wahing essentials</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-1-img/healthcare.jpg" alt="healthcare">
+              <p class="x-small fw-bold py-1">Immune &amp; healthcare</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-1-img/women-prsnl-care.jpg" alt="women care">
+              <p class="x-small fw-bold py-1">Wahing essentials</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-1-img/mens-grooming.jpg" alt="mens-grooming">
+              <p class="x-small fw-bold py-1">Men's grooming</p>
+            </div>
+          </div>
+          <a href="#" class="text-decoration-none">see more</a>
+        </div>
+        <div class="col-md bg-white p-3 me-3">
+          <h4>Upto 70% off | clearance store</h4>
+          <img src="assets/images/card-1-img/elec-clear-store.jpg" alt="clearence offer">
+          <a href="#" class="text-decoration-none">see more</a>
+        </div>
+        <div class="col-md bg-white p-3 me-3 border">
+          <h4>Revamp home in style</h4>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-1-img/home-decor.jpg" alt="home-decor">
+              <p class="x-small fw-bold py-1">Home decortion</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-1-img/badsheet.jpg" alt="bedsheet">
+              <p class="small py-1">Beds and sleeping</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-1-img/home-storage.jpg" alt="home-storage">
+              <p class="x-small fw-bold py-1">Home storage</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-1-img/lighting.jpg" alt="lighting">
+              <p class="small py-1">Lighting and more</p>
+            </div>
+          </div>
+          <a href="#" class="text-decoration-none">Explore your needs</a>
+        </div>
+        <div class="col-md me-3">
+          <div class="row bg-white p-3">
+            <h4>Sign in for your best experience</h4>
+            <button class="btn btn-warning rounded-pill my-2 ">sign in securely</button>
+          </div>
+          <div class="row bg-white mb-2">
+            <img src="assets/images/card-1-img/laptops from brands.jpg" alt="lapPy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid hero-cards mt-3">
+      <div class="row">
+        <div class="col-md bg-white p-3 mx-3">
+          <h4>Daily Essentials</h4>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-2-img/1-min._SY116_CB666463598_.jpg" alt="Cleaning">
+              <p class="x-small fw-bold py-1">Wahing essentials</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-2-img/2-min._SY116_CB666463598_.jpg" alt="healthcare">
+              <p class="x-small fw-bold py-1">Immune &amp; healthcare</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-2-img/3-min._SY116_CB666463598_.jpg" alt="women care">
+              <p class="x-small fw-bold py-1">Wahing essentials</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-2-img/4-min._SY116_CB666463598_.jpg" alt="mens-grooming">
+              <p class="x-small fw-bold py-1">Men's grooming</p>
+            </div>
+          </div>
+          <a href="#" class="text-decoration-none">See the latest offers</a>
+        </div>
+        
+        <div class="col-md bg-white p-3 me-3">
+          <h4>Shop by categories</h4>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-2-img/Electronic._SY116_CB431401553_.jpg" alt="home-decor">
+              <p class="x-small fw-bold py-1 text-center">Electronics</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-2-img/Fresh._SY116_CB431401553_.jpg" alt="bedsheet">
+              <p class="x-small fw-bold py-1 text-center">Fresh products</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-2-img/Mobile._SY116_CB431401553_.jpg" alt="home-storage">
+              <p class="x-small fw-bold py-1 text-center">Mobile Accessories</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-2-img/Fashion._SY116_CB431401553_.jpg" alt="lighting">
+              <p class="x-small fw-bold py-1 text-center">Fashion and more</p>
+            </div>
+          </div>
+          <a href="#" class="text-decoration-none">Explore more to buy</a>
+        </div>
+        <div class="col-md me-3">
+          <div class="row bg-white mb-2">
+            <img src="assets/images/card-2-img/Laptops-Sept2019._CB436595915_.jpg" alt="lapPy">
+          </div>
+          <div class="row bg-white p-3">
+            <h4>Sign in for your best experience</h4>
+            <button class="btn btn-warning rounded-pill my-2 ">sign in securely</button>
+          </div>
+        </div>
+        <div class="col-md bg-white p-3 me-3">
+          <h4>Women's fashion</h4>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-2-img/5-min._SY116_CB666463598_.jpg" alt="home-decor">
+              <p class="x-small fw-bold py-1">Unique dresses</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-2-img/6-min._SY116_CB666463598_.jpg" alt="bedsheet">
+              <p class="x-small fw-bold py-1">Shoes</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="assets/images/card-2-img/7-min._SY116_CB666463598_.jpg" alt="home-storage">
+              <p class="x-small fw-bold py-1">Watches &amp; jewellery</p>
+            </div>
+            <div class="col">
+              <img src="assets/images/card-2-img/8-min._SY116_CB666463598_.jpg" alt="lighting">
+              <p class="x-small fw-bold py-1">Cosmetics</p>
+            </div>
+          </div>
+          <a href="#" class="text-decoration-none">see more</a>
+        </div> 
+      </div>
+    </div>
+  </section>
+  <section class="horizon-slider bg-whie">
+    <h4>Today's hot deals</h4>
+    <div class="container-fluid">
+      <div class="sliding-items">
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/3105uicJ6hL._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/31AbOl2h8IS._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 1120 - 2500</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/4128f+dbbgL._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/41byRSET7RL._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/41fMpbU1iZL._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 30999 - 64950</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/41i9L0AkXcS._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/41k91d0EYfL._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/51B7IM37LLL._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/51ivRBHcH6L._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/51ljTyT0-LL._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/51oWV6Azb4L._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+        <div class="sliding-item">
+          <img src="assets/images/slider-1/51YC+iZHW0L._AC_SY200_.jpg" alt="Deals">
+          <p class="small m-0 p-0 text-center">&#8377; 112 - 250</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col w-25">
+      <h3>Everyday essentials</h3>
+      <div class="row">
+        <div class="col">
+          <div class=" border-0">
+            <img src="assets/images/cleaning.jpg" alt="washing">
+            <p class="card-text x-small fw-bold my-1">Cleaning essentials</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class=" border-0">
+            <img src="assets/images/healthcare.jpg" alt="healthcare">
+            <p class="card-text x-small fw-bold my-1">Immunity &amp; healthcare</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class=" border-0">
+            <img src="assets/images/women-prsnl-care.jpg" alt="womens care">
+            <p class="card-text x-small fw-bold my-1">Women's personal care</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class=" border-0">
+            <img src="assets/images/mens-grooming.jpg" alt="mens care">
+            <p class="card-text x-small fw-bold my-1">Men's grooming</p>
+          </div>
+        </div>
+      </div>
+      <a class="card-text my-1" href="#">see more</p>
+    </div>
+    <div class="col">
+      <div class="card px-2">
+        <h3>Up to 70% off | Electronics clearance store</h3>
+        <img src="assets/images/elec-clear-store.jpg" alt="...">
+        <div class="card-body">
+          <a class="card-text" href="#">see more</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card px-2">
+        <h3>Revamp your home in style</h3>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <img src="assets/images/badsheet.jpg" alt="washing">
+              <p class="card-text m-0 py-1 x-small">Bedsheet, curtains & more</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="assets/images/home-decor.jpg" alt="...">
+              <p class="card-text m-0 py-1 x-small">Home decoration</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <img src="assets/images/home-storage.jpg" alt="washing">
+              <p class="card-text m-0 x-small fw-bold">Home storage</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="assets/images/lighting.jpg" alt="...">
+              <p class="card-text x-small fw-bold py-1">Lighting solution</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <a class="card-text" href="#">see more</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h3>Up to 70% off | Electronics clearance store</h3>
+        <img src="assets/images/elec-clear-store.jpg" alt="...">
+        <a class="card-text" href="#">see more</p>
+      </div>
+    </div>
+  </div> -->

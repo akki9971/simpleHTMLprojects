@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: 500px;
+   
+}
+#slider{
+    max-width: 80%;
+    height: 60%;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+button{
+    border: none;
+    font-size: 40px;
+    color: #fff;
+    background: transparent;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.next{
+    right:5px;
+}
+.prew{
+    left:5px;
+}
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <div id="box">
+            <img src="img/a.jpg">
+        </div>
+        <!-- buttons for controls slider -->
+        <button class="prew" onclick="previusImage()"><i class="fa fa-arrow-left"></i></button>
+        <button class="next" onclick="nextImage()"><i class="fa fa-arrow-right"></i></button>
+    </div>
+
+    <script>
+        var arr_img = ['a', 'b', 'c', 'd', 'e'];
+        var x = 0;
+        function nextImage() {
+            var myslider = document.getElementById('box');
+            x++;
+            if (x >= arr_img.length) {
+                x = 0;
+            }
+            myslider.innerHTML = `<img src="img/${arr_img[x]}.jpg">`;
+        }
+        function previusImage() {
+            var myslider = document.getElementById('box');
+            x--;
+            if (x < 0) {
+                x = arr_img.length - 1;
+            }
+            myslider.innerHTML = `<img src="img/${arr_img[x]}.jpg">`;
+
+        }
+        setInterval(nextImage, 4000)
+    </script>
+</body>
+
+</html>

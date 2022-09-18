@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+
+
+  <input type="password" id="password">
+  <input type="checkbox" id="showhide" >
+  <i id="pa"></i>
+
+  <script>
+
+    var password = document.getElementById("password");
+    var showm = document.getElementById("showhide");
+    var show = true;
+    showm.addEventListener("click", myfn);
+
+   function myfn(){
+      if (show) {
+        password.setAttribute("type", 'text');
+        document.getElementById('pa').innerHTML = "show";
+        show = false;
+      }
+      else {
+        password.setAttribute("type", 'password');
+        document.getElementById('pa').innerHTML = "Hide";
+        show = true;
+      }
+    };
+
+
+    /*
+          $(document).ready(function()
+          {
+            let Show = true;
+            $('#visibility').click(function()
+            {
+              if (Show)
+              {
+                $('#password').attr('type', 'text');
+                $('#pa').html("Show");
+                Show = false;
+              }
+              else
+              {
+                $('#password').attr('type', 'password');
+                $('#pa').html("Hide");
+                Show = true;
+    
+              }
+            });
+          });*/
+  </script>
+
+</body>
+
+</html>

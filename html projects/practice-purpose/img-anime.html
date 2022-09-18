@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title></title>
+    <style>
+      *{margin:0;
+      padding:0;
+      box-sizing:border-box;}
+      .main_div {width:100%;
+height:100vh;
+background:#95a5a6;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.child_div {width:70%;
+height:60%;
+position:absolute;
+background-size:100% 100%;
+background-image:linear-gradient(0deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);
+box-shadow:0 5px 5px #ccc;
+animation:animate 10s linear infinite;}
+
+@keyframes animate{
+0% { background-image:linear-gradient(0deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+5% { background-image:linear-gradient(18deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+10% { background-image:linear-gradient(36deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+0 { background-image:linear-gradient(54deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+20% { background-image:linear-gradient(72deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+25% { background-image:linear-gradient(90deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+30% { background-image:linear-gradient(108deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+35% { background-image:linear-gradient(126deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+40% { background-image:linear-gradient(144deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+45% { background-image:linear-gradient(162deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+50% { background-image:linear-gradient(180deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+55% { background-image:linear-gradient(198deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+60% { background-image:linear-gradient(216deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+65% { background-image:linear-gradient(234deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+70% { background-image:linear-gradient(252deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+75% { background-image:linear-gradient(270deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+80% { background-image:linear-gradient(288deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+85% { background-image:linear-gradient(306deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+90% { background-image:linear-gradient(324deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+95% { background-image:linear-gradient(342deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+100% { background-image:linear-gradient(360deg, rgba(255,255,255,0.8) 50%, transparent 50%), url(images/4.jpg);}
+}
+@media(max-width:768px){
+.child_div{width:90%;
+height:40vh;}}
+    </style>
+  </head>
+
+  <body>
+    <div class="main_div">
+      <div class="child_div">
+      </div>
+    </div>
+  </body>
+
+</html>
+
+<!--
+Visual Code Mobile
+Developed By Manish Nirmal
+App Available on Play Store :-
+https://play.google.com/store/apps/details?id=lk.visual.code.mobile
+YouTube :-
+https://youtube.com/ManishNirmal
+-->

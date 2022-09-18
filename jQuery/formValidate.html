@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+        }
+        input{
+            margin: 0 0 10px 0;
+            /* display: block; */
+            padding: 2px 5px;
+            border-radius: 3px;
+            outline:none;
+            border: 1px solid black;
+            
+        }
+        input:focus{
+            border: 2px solid skyblue;
+            transform: scale(1.01);
+        }
+        #gender{
+            display:inline-block;
+        }
+        #password1,  #password2{
+            margin-right: 5px;
+        }
+        #sbmit{
+            display: block;
+            padding: 5px 25px;
+            background: linear-gradient(120deg, rgb(72, 72, 245), rgb(45, 86, 102));
+            color: rgb(197, 176, 186);
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit">
+        <label for="name">Enter name:
+        </label>
+            <input type="text" id="name"> <span id="nmerror"></span>  
+        <label for="phone">Enter phone No.:
+        </label>
+             <input type="text" id="phone" ><span id="phnerror" max-length="10"></span>  
+        <label for="mail">Enter email:
+        </label>
+             <input type="text" id="mail" ><span id="mailerror"></span>  
+        <label >Select gender :<br/>
+            <input type="radio" id="gender" name="gender"> Male
+            <input type="radio" id="gender" name="gender"> Female
+            <input type="radio" id="gender" name="gender"> Any others <span id="gendererror"></span>
+        </label>
+        <label for="password1">Enter password:
+        </label>
+             <input type="password" id="password1" ><input type="checkbox" id="ps1"><span id="psderror1"></span>  
+        <label for="password2">Confirm password:
+        </label>
+             <input type="password" id="password2" ><input type="checkbox" id="ps2"><span id="psderror2"></span>  
+        <input type="submit" value="Submit" id="sbmit">
+    </form>
+    
+
+    <script>
+        $(document).ready(function(){
+            $('form').submit(function(){
+            var nameExp =  /^[a-zA-Z]+$/;
+            var mailExp =  /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            var phoneExp = /^[0-9]*$/;
+            var passwordExp =  /^[a-zA-Z]\w{3,14}$/;
+
+            if($('#name').val()==""){
+                $('#nmerror').text("Please provide name");
+                $('#nmerror').css({"background":"#f1f1f1","color":"red"});
+                $('#name').focus();
+                return false;
+            }
+            if(!($('#name').val().match(nameExp))){
+                $('#nmerror').text("Name should be character only.");
+                $('#nmerror').css({"background":"#0000ff","color":"#fff"});
+                $('#name').focus();
+                return false;
+            }
+            if($('#phone').val()==""){
+                $('#phnerror').text("Please provide phone No.");
+                $('#phnerror').css({"background":"#f1f1f1","color":"red"});
+                $('#phone').focus();
+                return false;
+            }
+            if(!($('#phone').val().match(phoneExp))){
+                $('#phnerror').text("Phone No. should be valid.");
+                $('#phnerror').css({"background":"#0000ff","color":"#fff"});
+                $('#phone').focus();
+                return false;
+            }
+            if($('#phone').val().length<10){
+                $('#phnerror').text("Phone No. should be 10 digit.");
+                $('#phnerror').css({"background":"#eb00ff","color":"#fff"});
+                $('#phone').focus();
+                return false;
+            }
+            if($('#mail').val()==""){
+                $('#mailerror').text("Please provide name");
+                $('#mailerror').css({"background":"#f1f1f1","color":"red"});
+                $('#mail').focus();
+                return false;
+            }
+            if(!($('#mail').val().match(mailExp))){
+                $('#mailerror').text("Please provide valid mail.");
+                $('#mailerror').css({"background":"#0000ff","color":"#fff"});
+                $('#mail').focus();
+                return false;
+            }
+
+
+            var gender=$('#gender:checked');
+           
+           if(!gender.length>0)
+           {
+           	$("#gendererror").text("Plz select gender");
+          	return false;
+           }
+
+
+
+
+            var x = $('#password1').val();
+            var y = $('#password2').val();
+            if(x==""){
+                $('#psderror1').text("Please provide password");
+                $('#psderror1').css({"background":"#f1f1f1","color":"red"});
+                $('#password1').focus();
+                return false;
+            }
+            if(!(x.match(passwordExp))){
+                $('#psderror1').text("Please provide valid password.");
+                $('#psderror1').css({"background":"#0000ff","color":"#fff"});
+                $('#password1').focus();
+                return false;
+            }
+            if(y==""){
+                $('#psderror2').text("Confirm your password");
+                $('#psderror2').css({"background":"#f1f1f1","color":"red"});
+                $('#password2').focus();
+                return false;
+            }
+            // if(!($('#password2').val().match(passwordExp))){
+            //     $('#psderror2').text("Please provide valid password.");
+            //     $('#psderror2').css({"background":"#0000ff","color":"#fff"});
+            //     $('#password2').focus();
+            //     return false;
+            // }
+            if(x != y){                
+                $('#psderror2').text("Password should be match.");
+                $('#psderror2').css({"background":"#0000ff","color":"#fff"});
+                $('#password2').focus();
+                return false;
+            }
+        });
+        $('#ps1').click(function(){
+            if(show==true){
+            $('password1').attr("type","text")
+            return false;
+            }
+            else{
+                $('password1').attr("type","password")
+            return true;
+            }
+        });
+    });
+    </script>
+</body>
+</html>

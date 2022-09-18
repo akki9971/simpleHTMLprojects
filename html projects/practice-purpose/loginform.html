@@ -1,0 +1,174 @@
+l
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(images/1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 2s;
+
+      animation-name: animate;
+      animation-direction: alternate-reverse;
+      animation-duration: 12s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+      animation-timing-function: ease-in-out;
+    }
+
+    .container {
+      width: 440px;
+      height: 400px;
+      padding: 10px;
+      background-image: linear-gradient(180deg, #75E6DA, #00acee);
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+    }
+
+    .container a {
+      text-decoration: none;
+    }
+
+    h3 {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.6);
+      padding: 20px 10px;
+    }
+
+    .loginoption {
+      display: inline-flex;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .loginoption .fbbtn {
+      padding: 5px 15px;
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      margin-right: 20px;
+    }
+
+    .loginoption .twbtn {
+      background-color: #00acee;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 5px 15px;
+      justify-self: right;
+    }
+
+    .credentials {
+      width: 100%;
+      display: block;
+      padding: 15px;
+    }
+
+    .credentials input[type=text] {
+      width: 100%;
+      margin: 10px 0px;
+      background-color: transparent;
+      padding: 5px 0px;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+    }
+
+    .credentials input[type=password] {
+      width: 100%;
+      margin: 10px 0px;
+      padding: 5px 0px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+    }
+
+    .credentials input::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .credentials p {
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .credentials input[type=checkbox] {
+      font-size: 10px;
+    }
+
+    .loginbtn {
+      background-color: #2B6AD0;
+      color: white;
+      width: 100%;
+      border: none;
+      border-radius: 3px;
+      padding: 5px 15px;
+    }
+
+    @keyframes animate {
+      0% {
+        background-image: url(images/3.jpg);
+      }
+
+      50% {
+        background-image: url(images/2.jpg);
+      }
+
+      100% {
+        background-image: url(images/4.jpg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <h3>Sign up. It's fast and easy.</h3>
+      <div class="loginoption">
+        <a href="https://facebook.com/" class="fbbtn">Sign in with Facebook</a>
+        <a href="https://twitter.com/" class="twbtn">Sign in with Twitter</a>
+      </div>
+      <form>
+        <div class="credentials">
+          <input type="text" placeholder="Enter Username">
+          <input type="text" placeholder="Enter Email Address">
+          <input type="password" placeholder="Enter Password">
+          <input type="password" placeholder="Confirm Password">
+          <p>
+            <input type="checkbox" checked="check"> I accept terms and conditions.
+          </p>
+          <button class="loginbtn" type="submit">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
+<!--
+Visual Code Mobile
+Developed By Manish Nirmal
+App Available on Play Store :-
+https://play.google.com/store/apps/details?id=lk.visual.code.mobile
+YouTube :-
+https://youtube.com/ManishNirmal
+-->

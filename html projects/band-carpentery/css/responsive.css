@@ -1,0 +1,36 @@
+@media  (max-width: 850px){
+	.menu ul{
+		/* display: none; */
+		width: 100%;
+
+	}
+	#menushow{
+		display: block;
+
+	}
+
+	.container2 {
+		margin: 50px 0px;
+		display: block;
+	}
+	.container2 .about_us {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	.container2 .about_us p {
+		color: black;
+		font-size: 16px;
+		padding-top: 20px;
+		line-height: 20px;
+		text-align: justify;
+	}
+	.card_box {
+		width: 100%;
+		display: block;
+		margin-top: 35px;
+		padding:10px auto;
+	}
+}
+
+

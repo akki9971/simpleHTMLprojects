@@ -1,0 +1,162 @@
+.appspart {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);	
+				margin: -5px 9px;
+				grid-column-gap: 10px;
+				grid-row-gap:9px ;
+				/*opacity: 0.6;*/
+
+			}
+
+					/*---apps----*/
+
+	.app {
+				width: 41px;
+				height: 39px;
+				border-radius: 10px;
+				background: radial-gradient(#00D100, #00FF00, #5CFF5C);
+				/*opacity: 0.3;*/
+				position: relative;
+				margin-top: 8px;
+
+			}
+			.fas, .fab, .fal, .far {
+				font-size: 27px;
+				margin:6px 7px;
+				color: white;
+			}
+			.fa-safari{
+				color: blue;
+			}
+			.fa-music{
+				color: transparent;
+				background: linear-gradient(#E84A5F , rgb(0,1,255));
+				-webkit-background-clip: text;
+			}
+			.fa-camera-retro{
+				color: black;
+			}
+			.fa-envira{
+				color: #01937C;
+			}
+			.fa-play{
+				font-size: 22px;
+				margin: 10px 13px;
+			}
+			.fa-cloud-sun{
+				font-size: 23px;
+			}
+			.fa-map-marked-alt{
+				font-size: 23px;
+			}
+
+			.fa-clipboard{
+				color: blue;
+				margin: 5px 11px;
+				margin-bottom: 7px;
+			}
+			.fa-list-ul{
+				color: grey;
+			}
+			.fa-heart{
+				color: #F54748;
+			}
+			.fa-galactic-republic{
+				color: #1c1c1c;
+			}
+			.fa-itunes{
+				color: #fff;
+				font-size: 30px;
+			}
+			.fa-book-open{
+				font-size: 24px;
+			}
+			.fa-critical-role{
+				color: transparent;
+				background: linear-gradient(#F54748 , blue , green);
+				-webkit-background-clip: text;
+			}
+
+
+			.day{
+				font-size: 8px;
+				font-family: verdana;
+				font-weight: 500;
+				text-align: center;
+				color: purple;
+				margin-top: 3px;
+			}
+			.date{
+				font-size: 28px;
+				text-align: center;
+				font-weight: 1;
+				font-family: Courier;
+				margin-top: -3px;
+			}
+			/*.video::before{
+				content: '';
+				width: 41px;
+				height: 12px;
+				background: saddlebrown;
+				position: absolute;
+				border-radius: 10px 10px 0 0;
+
+			}*/
+			.bg-white{
+				background: #fff;
+			}
+			.bg-blue{
+				background: linear-gradient(blue, skyblue);
+			}
+			.blue-bg{
+				background: linear-gradient(skyblue, blue);
+			}
+			.bg-black{
+				background: #2B2B2B;
+			}
+			.bg-grey{
+				background: linear-gradient(#A2B29F, #798777);
+			}
+			.bg-yellow{
+				background: linear-gradient(yellow 20%, #fff 50%);
+			}
+			.orange-bg{
+				background: linear-gradient(to right, orange 20%, #fff 50%);
+			}
+			.bg-orange{
+				background: linear-gradient(#FC5404, #F98404);
+			}{
+				background: linear-gradient(skyblue, #BDC7C9);
+			}
+			.bg-skyB{
+				background: linear-gradient(skyblue, #185ADB);
+			}
+			.bg-pink{
+				background: linear-gradient(pink, purple);
+			}
+			.iconame{
+
+				font-size: 8px;
+				position: absolute;
+				bottom: -11px;
+				color: #ffecec;
+				font-weight: 400;
+				left: 50%;
+				transform: translateX(-50%);
+				text-transform: capitalize;
+				
+			}
+
+			/*---page scroll---*/
+    		.pagescroll{
+    			font-size: 15px;
+    			text-align: center;
+    		}
+    		.fa-ellipsis-h{
+    			margin-top: 11px;
+    			font-size: 23px;
+    			/*background: linear-gradient(to right, #fff, blue, #fff);*/
+    			/*-webkit-background-clip: text;*/
+    			/*color: grey;*/	
+    		}
+					/*--apps  css ends---*/

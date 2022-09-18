@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: chartreuse;
+            /* width: 100vw; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1{
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+        }
+        .box2{
+            position:relative;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(214, 105, 105);
+            
+        }
+        .box2::before{
+            content: "\f002";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size:100px;
+            color:rgb(17, 1, 161);
+            font-family: FontAwesome;
+        }
+        .box2::after{
+            content: "\f002";
+            position: absolute;
+            top: 0%;
+            transform-style: preserve-3d;
+            
+            right: 50%;
+            font-size:100px;
+            color:rgb(17, 1, 161);
+            font-family: FontAwesome;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

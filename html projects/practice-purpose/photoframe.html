@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .custombody{
+            max-width: 100vw;
+            overflow: hidden;
+            position: relative;
+            background: burlywood;
+            /*max-height: fit-content;
+            height: 100vh;*/
+
+        }
+        .ab{
+            position: absolute;
+        }
+        .balloon{
+            width: 150px;
+            height: 150px;
+            border-radius: 50% 50% 50% 0;
+            background-color: rgb(27, 68, 11);
+            transform: rotate(-45deg);
+        }
+        .b1{
+            top: 100px;
+            left: 2%;
+        }
+        .b2{
+            top: 150px;
+            left: 15%;
+        }
+        .b3{
+            top: 100px;
+            left: 30%;
+        }
+        .b4{
+            top: 100px;
+            right: 2%;
+        }
+        .b5{
+            top: 150px;
+            right: 15%;
+        }
+        .b6{
+            top: 100px;
+            right: 30%;
+        }
+        .line{
+            height: 300px;
+            width: 1px;
+            background-color: rgb(20, 15, 15);
+            position: absolute;
+            left: -70%;
+            top: 70%;
+            transform: rotate(45deg);
+        }
+        .heart1{
+            width: 150px;
+            height: 230px;
+            background: rgb(197, 38, 10);
+            border-radius: 80px 80px 0 0;
+            left: 41%;
+            top: 300px;
+            transform: rotate(-45deg);
+        }
+        .heart2{
+            width: 150px;
+            height: 230px;
+            background: rgb(197, 38, 10);
+            border-radius: 80px 80px 0 0;
+            left: 45.3%;
+            top: 300px;
+            transform: rotate(45deg);
+        }
+        .cloud{
+            position: relative;
+        }
+        .cl{
+            width: 80px;
+            height: 80px;
+            /*border-radius: 50%;*/
+            background-color: deepskyblue;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="custombody">
+        <div class="balloon b1 ab"><span class="line"></span></div>
+        <div class="balloon b2 ab"><span class="line"></span></div>
+        <div class="balloon b3 ab"><span class="line"></span></div>
+        <div class="heart1 ab"></div>
+        <div class="heart2 ab"></div>
+        <div class="balloon b4 ab"><span class="line"></span></div>
+        <div class="balloon b5 ab"><span class="line"></span></div>
+        <div class="balloon b6 ab"><span class="line"></span></div>
+    </div>
+    <div class="cloud">
+        <span class="cl c1"></span>
+        <span class="cl c2"></span>
+        <span class="cl c3"></span>
+        <span class="cl c4"></span>
+        <span class="cl c4"></span>
+    </div>
+</body>
+</html>

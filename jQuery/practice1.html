@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jQuery Basics</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    body {
+        background: rgb(182, 225, 226);
+    }
+
+    header {
+        background: rgb(44, 176, 180);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    ul li {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 10px;
+    }
+
+    button{
+            all: unset;
+            width: 20px;
+            height: 18px;
+            position: relative;
+            cursor: pointer;
+            display: none;
+        }
+        button span{
+            width: 16px;
+            height: 2px;
+            border-radius: 5px;
+            background: black;
+            position: absolute;
+            left: 0;
+        }
+        button span:before{
+            content: '';    
+            width: 16px;
+            height: 2px;
+            border-radius: 5px;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: -4px;
+        }
+        button span:after{
+            content: '';
+            width: 16px;
+            height: 2px;
+            border-radius: 5px;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+
+    @media screen and (max-width: 800px) {
+        .menu {
+            display: none;
+            height: 120px;
+            width: 100%;
+        }
+        .menu ul{
+            
+        }
+        .menu ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        button {
+            display: block;
+        }
+        
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2>facebook</h2>
+        </div>
+            <button><span></span></button>
+        <div class="menu">
+            <ul>
+                <li>home</li>
+                <li>login</li>
+                <li>signup</li>
+                <li>forget</li>
+            </ul>
+        </div>
+
+
+    </header>
+
+
+    <script>
+            $('document').ready(function () {
+                $('button').click(() => {
+                    $('.menu').slideToggle(500)
+                })
+            });
+    </script>
+</body>
+
+</html>

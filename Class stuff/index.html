@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Show/Hide Password Toggle</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<form >
+		<input type="password" id="password"/>
+		<input type="checkbox" id="visibility" > <i id="sh">Show</i>
+	</form>
+	<script>
+		// let password=document.getElementById('password');
+		// let visibility=document.getElementById('visibility');
+		
+		// let is_show=true;
+		// visibility.addEventListener('click',function(){
+		// 	if(is_show){
+		// 		password.setAttribute('type','text');
+		// 		document.getElementById('sh').innerHTML="Show";
+		// 		is_show=false;
+		// 	}else{
+		// 		password.setAttribute('type','password');
+		// 		document.getElementById('sh').innerHTML="Hide";
+		// 		 is_show=true;
+		// 	}
+		
+		// });
+
+
+/////////////using jquery//////////////////////
+	
+	$(document).ready(function(){
+		let is_show=true;
+		$('#visibility').click(function(){
+			if(is_show){
+				$('#password').attr('type','text');
+				$('#sh').html("Show");
+				is_show=false;
+			}else{
+				$('#password').attr('type','password');
+				$('#sh').html("Hide");
+				is_show=true;
+			}
+		
+		});
+	});
+		
+		
+	</script>
+</body>
+</html>

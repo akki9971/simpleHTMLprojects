@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Color layout using float</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    
+    <style type="text/css">
+      *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-------some defined classes----*/
+
+/*---borders----*/
+.b_all{
+   border: 2px solid black;
+}
+.bot{
+  border-top: 2px solid black;
+}
+.bor{
+  border-right: 2px solid black;
+}
+.bob{
+  border-bottom: 2px solid black;
+}
+.bol{
+  border-left: 2px solid black;
+}
+
+
+
+/*------background colors ----*/
+
+
+.black{
+  background: rgb(0, 0, 0);
+}
+.brown{
+  background: rgb(136, 0, 22);
+}
+.red{
+  background: rgb(237, 27, 36);
+}
+.yellow{
+  background: rgb(254, 242, 0);
+}
+.green{
+  background: rgb(35, 177, 77);
+}
+.d_green{
+  background: rgb(0, 128, 129);
+}
+.parrot{
+  background: rgb(181, 229, 29);
+}
+.algae{
+  background: rgb(150, 160, 99);
+}
+.blue{
+  background: rgb(63, 71, 204);
+}
+.l_blue{
+  background: rgb(112, 146, 192);
+}
+.skyb{
+  background: rgb(0, 165, 230);
+}
+.l_skyb{
+  background: rgb(154, 217, 234);
+}
+.grey_blue{
+  background: rgb(199, 191, 230);
+}
+.grey{
+  background: rgb(127, 127, 127);
+}
+.l_grey{
+  background: rgb(195, 195, 195);
+}
+.l_khaki{
+  background: rgb(239, 227, 175);
+}
+.pink{
+  background: rgb(255, 173, 201);
+}
+.l_pink{
+  background: rgb(255, 232, 236);
+}
+.voilet{
+  background: rgb(211, 142, 235);
+}
+
+
+.center{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+/*------- background colors defined classes ends -----------*/
+
+
+
+
+body{
+  padding:5% 3%;
+}
+.layout{
+  width: 70%;
+  height: 70vh;
+  border: 5px solid black;
+  float: left;
+}
+
+.mainrows{
+  width: 100%;
+  height: 25%;
+  border-bottom: 5px solid black;
+}
+.mainrows_last{
+  border: none;
+}
+
+.maincolumns{
+  width: calc(100% / 5);
+  height: 100%;
+  border-right: 5px solid black;
+  float: left;
+}
+.maincolumns_last{
+  border: none;
+}
+
+                   /*---main-row 1-----*/
+.r1c1_row{
+  height: 50%;
+}
+.r1c2_column{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.r1c3_row1{
+  width: 100;
+  height: 28%;
+}
+.r1c3_row2{
+  width: 100%;
+  height: 33%;
+}
+.r1c3_row3{
+  width: 100%;
+  height: 39%;
+}
+
+.r1c4_column{
+  height: 100%;
+  float: left;
+}
+.r1c4_column:nth-child(1){
+  width: 28%;
+}
+.r1c4_column:nth-child(2){
+  width: 33%;
+}
+.r1c4_column:nth-child(3){
+  width: 39%;
+}
+
+.r1c5_row{
+  height: 50%;
+}
+.r1c5_row_col{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+
+               /*--------main row 2 starts -------*/
+.r2c1_box{
+  width: 65%;
+  height: 60%;
+}
+.r2c2_column{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.r2c2_row{
+  width: 100%;
+  height: 50%;
+}
+.r2c4_row_col{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.r2c5_row{
+  width: 100%;
+  height: 50%;
+}
+.r2c5_row_col1{
+  width: calc(100% / 3);
+  height: 100%;
+  float: left;
+}
+.r2c5_row_col2{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+          /*-------main row 3 starts -------*/
+.r3c1_row{
+  width: 100%;
+  height: 50%;
+}
+.r3c1_row_col{
+  width: calc(100% / 3);
+  height: 100%;
+  float: left;
+}
+
+.r3c2_col1{
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+.r3c2_col2{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.r3c2_col_row{
+  width: 100%;
+  height: 25%;
+}
+.r3c3_row1{
+  width: 100%;
+  height: 25%;
+}
+.r3c3_row2{
+  width: 100%;
+  height: 50%;
+}
+.r3c3_row2_col{
+  width: calc(100% / 3);
+  height: 100%;
+  float: left;
+
+}
+
+.r3c5_row1{
+  width: 100%;
+  height: 30%;
+}
+.r3c5_row2{
+  width: 100%;
+  height: 40%;
+}
+.r3c5_row_col1{
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+.r3c5_row_col2{
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+
+          /*-------main row 4 starts -------*/
+
+.r4c1_box{
+  width: 70%;
+  height: 70%;
+}
+.r4c1_box_box{
+  width: 70%;
+  height: 70%;
+}
+.r4c1_box_box_box{
+  width: 50%;
+  height: 50%;
+}
+
+.r4c2_box{
+  width: 60%;
+  height: 60%;
+}
+
+.r4c3_circle{
+  width: 60%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+.r4c4_circle{
+  width: 60%;
+  height: 80%;
+  border-radius: 50%;
+}
+.r4c4_circle_circle{
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.r4c5_circle{
+  width: 60%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+
+
+   /*----- 2nd portion starts-----*/
+.layout_text{
+  padding: 5% 2%;
+  width: 30%;
+  height: 85vh;
+  /*border: 5px solid green;*/
+  float: right;
+}
+h1{
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+h3{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: rgba(50, 50, 50, 1.0);
+}
+
+@media only screen and (max-width: 768px){
+  body{
+    background: hotpink;
+    padding: 5%;
+  }
+  .layout{
+    width: 100%;
+    height: 80vh;
+    float: none;
+  }
+  .layout_text{
+    width: 100%;
+    float: none;
+    margin: 0 10%;
+
+    
+  }
+}
+@media only screen and (max-width: 430px){
+  body{
+    background: palegreen;
+    padding: 5%;
+  }
+  .layout{
+    height: 50vh;
+    
+  }
+  .layout_text{
+    margin: ;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+        <section class="layout">
+
+          <!-- --- 1st main row-- -->
+            <div class="mainrows">
+              <div class="maincolumns">
+                 <div class="r1c1_row brown bob"></div>
+                <div class="r1c1_row yellow"></div>
+              </div>
+
+              <div class="maincolumns">
+                <div class="r1c2_column green bor"></div>
+                <div class="r1c2_column blue"></div>
+              </div>
+              <div class="maincolumns">
+                <div class="r1c3_row1 yellow bob"></div>
+                <div class="r1c3_row2 l_blue bob"></div>
+                <div class="r1c3_row3 red"></div>
+              </div>
+              <div class="maincolumns">
+                <div class="r1c4_column blue bor"></div>
+                <div class="r1c4_column grey bor"></div>
+                <div class="r1c4_column red"></div>
+              </div>
+              <div class="maincolumns maincolumns_last">
+                <div class="r1c5_row bob">
+                  <div class="r1c5_row_col grey bor"></div>
+                  <div class="r1c5_row_col grey_blue"></div>
+                </div>
+                <div class="r1c5_row">
+                  <div class="r1c5_row_col grey_blue bor"></div>
+                  <div class="r1c5_row_col grey"></div>
+                </div>
+              </div>
+            </div>
+            <!-- --------- 2nd main row ------- -->
+
+            <div class="mainrows">
+
+              <div class="maincolumns skyb">
+                <div class="r2c1_box center l_skyb b_all"></div>
+              </div>
+
+              <div class="maincolumns">
+                <div class="r2c2_column bor">
+                  <div class="r2c2_row l_khaki bob"></div>
+                  <div class="r2c2_row yellow"></div>
+                </div>
+                <div class="r2c2_column l_blue"></div>
+              </div>
+
+              <div class="maincolumns">
+                <div class="r2c2_column pink bor"></div>
+                <div class="r2c2_column ">
+                  <div class="r2c2_row skyb bob"></div>
+                  <div class="r2c2_row l_grey"></div>
+                </div>
+              </div>
+
+              <div class="maincolumns">
+                <div class="r1c5_row bob">
+                  <div class="r1c5_row_col bor">
+                    <div class="r2c4_row_col l_grey bor"></div>
+                    <div class="r2c4_row_col grey_blue"></div>
+                  </div>
+                  <div class="r1c5_row_col yellow"></div>
+                </div>
+                <div class="r1c5_row">
+                  <div class="r1c5_row_col yellow bor"></div>
+                  <div class="r1c5_row_col voilet"></div>
+                </div>
+              </div>
+
+              <div class="maincolumns maincolumns_last">
+                <div class="r2c5_row bob">
+                  <div class="r2c5_row_col1 skyb bor"></div>
+                  <div class="r2c5_row_col1 green bor"></div>
+                  <div class="r2c5_row_col1 skyb"></div>
+                </div>
+                <div class="r2c5_row">
+                  <div class="r2c5_row_col2 parrot bor"></div>
+                  <div class="r2c5_row_col2 l_skyb"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ------ 3rd main row-------- -->
+            <div class="mainrows">
+              <div class="maincolumns">
+                <div class="r3c1_row l_pink bob"></div>
+                <div class="r3c1_row">
+                  <div class="r3c1_row_col pink bor"></div>
+                  <div class="r3c1_row_col grey bor"></div>
+                  <div class="r3c1_row_col l_grey"></div>
+                </div>
+              </div>
+
+              <div class="maincolumns">
+                <div class="r3c2_col1 d_green bor"></div>
+                <div class="r3c2_col1 l_khaki bor"></div>
+                <div class="r3c2_col2">
+                  <div class="r3c2_col_row bob"></div>
+                  <div class="r3c2_col_row pink bob"></div>
+                  <div class="r3c2_col_row bob"></div>
+                  <div class="r3c2_col_row l_grey"></div>
+                </div>
+              </div>
+              <div class="maincolumns">
+                
+                <div class="r3c3_row1 l_grey bob"></div>
+                <div class="r3c3_row1 l_khaki bob"></div>
+                <div class="r3c3_row2">
+                  <div class="r3c3_row2_col d_green bor"></div>
+                  <div class="r3c3_row2_col l_grey bor"></div>
+                  <div class="r3c3_row2_col d_green"></div>
+                </div>
+              </div>
+              <div class="maincolumns">
+                <div class="r1c5_row bob">
+                  <div class="r1c5_row_col d_green bor"></div>
+                  <div class="r1c5_row_col l_pink"></div>
+                </div>
+                <div class="r1c5_row">
+                  <div class="r1c5_row_col pink bor"></div>
+                  <div class="r1c5_row_col l_grey"></div>
+                </div>
+              </div>
+              <div class="maincolumns maincolumns_last">
+                <div class="r3c5_row1 bob">
+                  <div class="r3c5_row_col1 l_pink bor"></div>
+                  <div class="r3c5_row_col2 l_khaki bor"></div>
+                  <div class="r3c5_row_col1 l_grey"></div>
+                </div>
+                <div class="r3c5_row2 bob">
+                  <div class="r3c5_row_col1 d_green bor"></div>
+                  <div class="r3c5_row_col2 pink bor"></div>
+                  <div class="r3c5_row_col1 d_green"></div>
+                </div>
+                <div class="r3c5_row1">
+                  <div class="r3c5_row_col1 l_grey bor"></div>
+                  <div class="r3c5_row_col2 l_pink bor"></div>
+                  <div class="r3c5_row_col1 l_khaki"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ----------4th main row------- -->
+            <div class="mainrows mainrows_last">
+              <div class="maincolumns algae">
+                <div class="r4c1_box center l_grey b_all">
+                  <div class="r4c1_box_box center algae b_all">
+                    <div class="r4c1_box_box_box center l_grey b_all"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="maincolumns">
+                <div class="r1c5_row bob">
+                  <div class="r1c5_row_col voilet bor">
+                    <div class="r4c2_box center l_grey b_all"></div>
+                  </div>
+                  <div class="r1c5_row_col voilet">
+                    <div class="r4c2_box center l_grey b_all"></div>
+                  </div>
+                </div>
+                <div class="r1c5_row">
+                  <div class="r1c5_row_col voilet bor">
+                    <div class="r4c2_box center l_grey b_all"></div>
+                  </div>
+                  <div class="r1c5_row_col voilet">
+                    <div class="r4c2_box center l_grey b_all"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="maincolumns l_pink">
+                <div class="r4c3_circle center pink b_all"></div>               
+              </div>
+
+              <div class="maincolumns yellow">
+                <div class="r4c4_circle center black">
+                  <div class="r4c4_circle_circle center pink"></div>
+                </div>
+              </div>
+
+              <div class="maincolumns maincolumns_last">
+                <div class="r1c5_row bob">
+                  <div class="r1c5_row_col brown bor">
+                    <div class="r4c5_circle center l_grey b_all"></div>
+                  </div>
+                  <div class="r1c5_row_col brown">
+                    <div class="r4c5_circle center l_grey b_all"></div>
+                  </div>
+                </div>
+                <div class="r1c5_row">
+                  <div class="r1c5_row_col brown bor">
+                    <div class="r4c5_circle center l_grey b_all"></div>
+                  </div>
+                  <div class="r1c5_row_col brown">
+                    <div class="r4c5_circle center l_grey b_all"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+        </section>
+
+        <!-- -------text section------- -->
+        <section class="layout_text">
+          <div class="text">
+            <h1>4*5 HTML CSS layout </h1>
+            <h3>1. Use pure HTML and CSS only</h3>
+            <h3>2. Only use position, float, margin, padding</h3>
+            <h3>3. Dont use grid</h3>
+            <h3>4. Dont use bootstrap</h3>
+            <h3>5. Dont use flex</h3>
+          </div>
+
+        </section>
+  </body>
+
+</html>

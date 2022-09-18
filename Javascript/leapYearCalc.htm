@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap year calc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background: skyblue;
+            /* background-image: linear-gradient(to right, purple, blue); */
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            background: hotpink;
+            box-shadow: 0 0 100px 20px blue;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 300px;
+            z-index: -1;
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            background: hotpink;
+            box-shadow: 0 0 100px 20px blue;
+            /* transform: rotateZ(20deg); */
+            /* transform: rotate(30deg); */
+            position: absolute;
+            top: 250px;
+            right: 350px;
+            animation: animate 5s linear infinite;
+        }
+        @keyframes animate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .contain {
+            width: 400px;
+            height: 350px;
+            background: rgba(23, 22, 24, 0.6);
+            box-shadow: 0 0 10px 5px #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 30px 20px;
+            color: white;
+        }
+
+        .contain h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .contain h2 {
+            font-size: 24px;
+            margin-bottom: 100px;
+        }
+
+        .contain input {
+            width: 50%;
+            padding: 10px 15px;
+            margin-right: -5px;
+            background: transparent;
+            border: 2px solid rgb(255, 217, 0);
+            border-right: none;
+            color: gold;
+            border-radius: 5px 0 0 5px;
+            /* font-size: 19px; */
+        }
+
+        .contain input::placeholder {
+            color: #fff;
+        }
+
+        .contain input:focus {
+            outline: none;
+        }
+
+        .contain button {
+            padding: 10px 15px 10px 40px;
+            font-weight: 600;
+            color: white;
+            border: 2px solid gold;
+            border-left: none;
+            background: transparent;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .contain p {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="contain">
+        
+            <h1>Javascript</h1>
+            <h2>Leap Year Tester</h2>
+            <input type="text" name="data" id="dataCollect" placeholder="Ener year..." value="2021" >
+            <button type="submit" id="result" onclick="yourResult()">Get Result</button>
+            <p id="demo"></p>
+    </div>
+
+
+    <!-- --------Java Script --------- -->
+
+    <script>
+
+        function yourResult() {
+
+            let year = document.getElementById("dataCollect").value;
+          if(year<=0){
+              document.getElementById('demo').innerHTML = "Please enter valid data.";
+          }else
+            if (year % 4 === 0 ) {
+                if (year % 100 === 0 ) {
+                    if (year % 400 === 0 ) {
+                        document.getElementById('demo').innerHTML = year + " is a leap year.";
+                    } else {
+                        document.getElementById('demo').innerHTML = year + " is not a leap year.";
+                    }
+                }
+                else {
+                    document.getElementById('demo').innerHTML = year + " is a leap year.";
+                }
+            }
+            else {
+                document.getElementById('demo').innerHTML = year + " is not a leap year.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

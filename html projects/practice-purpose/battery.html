@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>battery</title>
+	<style type="text/css">
+	body{
+		background-color: tomato;
+	}
+		.battery_main{
+			position: absolute;
+			top: 30%;
+			left: 40%;
+			transform: scale(6);
+		}
+		.battery{
+			width: 50px;
+			height: 20px;
+			padding: 5px;
+			font-size: 15px;
+			color: tomato;
+			font-family: sans-serif;
+			background-image: linear-gradient(to right, #fff 70%, transparent 20%);
+			border: 3px solid silver;
+			border-radius: 5px;
+		}
+		.battery::after{
+			content: '';
+			position: absolute;
+			width: 6px;
+			height: 12px;
+			border-radius: 0 2px 2px 0;
+			background-color: silver;
+			right: -4px;
+			top: 12px;
+		}
+	</style>
+</head>
+<body>
+	<section class="main">
+		<div class="battery_main">
+			<div class="battery">70%</div>
+		</div>
+	</section>
+</body>
+</html>

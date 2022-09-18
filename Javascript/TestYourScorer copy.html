@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Tester</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: hotpink;
+            /* background-image: linear-gradient(to right, purple, blue); */
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            background: rgb(65, 219, 26);
+            box-shadow: 0 0 100px 20px red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 300px;
+            z-index: -1;
+        }
+
+        .triangle {
+            width: 200px;
+            height: 200px;
+            background: rgb(65, 219, 26);
+            box-shadow: 0 0 100px 20px red;
+            /* transform: rotateZ(20deg); */
+            transform: rotate(30deg);
+            position: absolute;
+            top: 250px;
+            right: 350px;
+        }
+
+        .contain {
+            width: 400px;
+            height: 450px;
+            background: rgba(23, 22, 24, 0.6);
+            box-shadow: 0 0 10px 5px #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 15px;
+            color: white;
+        }
+
+        .contain h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .contain h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contain input {
+            width: 50%;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            background: transparent;
+            border: 2px solid gold;
+            color: gold;
+            border-right: none;
+            border-top: none;
+            /* font-size: 19px; */
+        }
+
+        .contain input::placeholder {
+            color: #fff;
+        }
+
+        .contain input:focus {
+            outline: none;
+        }
+
+        .contain label {
+            margin-left: 5px;
+        }
+
+        .contain button {
+            padding: 10px 75px;
+            font-weight: 600;
+            color: white;
+            margin-left: 75px;
+            border: 2px solid tomato;
+            background: transparent;
+            display: block;
+        }
+
+        .contain p {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <div class="contain">
+        <h1>Javascript</h1>
+        <h2>Check your result</h2>
+        <!-- <label for="text">Type your Score Here: </label> -->
+        <input type="text" id="math" placeholder="Maths..." value="33">
+        <label>/100</label>
+
+        <input type="text" id="eng" placeholder="English..." value="44">
+        <label>/100</label>
+
+        <input type="text" id="sc" placeholder="Science..." value="55">
+        <label>/100</label>
+
+        <input type="text" id="SSc" placeholder="SSc..." value="66">
+        <label>/100</label>
+
+        <input type="text" id="hin" placeholder="Hindi..." value="77">
+        <label>/100</label>
+
+        <button type="submit" id="result" onclick="yourResult()">Get Result</button>
+        <p id="demo"></p>
+    </div>
+
+    <!-- --------Java Script --------- -->
+    <script>
+
+        function yourResult() {
+            let maths = document.getElementById("math").value;
+            let english = document.getElementById("eng").value;
+            let science = document.getElementById("sc").value;
+            let ssc = document.getElementById("SSc").value;
+            let hindi = document.getElementById("hin").value;
+
+            let total = Number(maths) + Number(english) + Number(science) + Number(ssc) + Number(hindi);
+
+            let percen = total / 5;
+            let myscore = percen;
+
+            if (myscore > 33) {
+                if (myscore > 95) {
+                    if (myscore > 100) {
+                        document.getElementById('demo').innerHTML = "Please enter Valid Score.";
+                    } else {
+                        document.getElementById('demo').innerHTML = percen +"%  " +" Hurray! You are a topper.";
+                    }
+                }
+                else {
+                    document.getElementById('demo').innerHTML =percen + "%  "+ " You are passed.";
+                }
+            }
+            else {
+                document.getElementById('demo').innerHTML =percen +"%  "+  " Sorry, Your have to study harder :(";
+            }
+        }
+    </script>
+</body>
+
+</html>

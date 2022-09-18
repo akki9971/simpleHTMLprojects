@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>layout</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		/*some colors define*/
+
+		.pinkbg{
+			background: #db9ea3;
+		}
+		.bgskyblu{
+			background: #02a2ed;
+		}
+		.yellowbg{
+			background: #ffc90d;
+		}	
+		.greybg{
+			background: #c3c3c3;
+		}	
+		.bg_d_green{
+			background: #008081;
+		}
+		.bgbisk{
+			background: #efe3af;
+		}
+		.bgtan{
+			background: #d6bca3;
+		}
+
+		/*--some border defined classes ----*/
+
+
+		.bot{
+			border-top: 2px solid black;
+		}
+		.bor{
+			border-right: 2px solid black;
+		}
+		.bob{
+			border-bottom: 2px solid black;
+		}
+		.bol{
+			border-left: 2px solid black;
+		}
+
+		/*some defined classes for multi use*/
+		.in_blok{
+			display: inline-block;
+
+		}
+		.in_grid{
+			display: grid;
+		}
+		.r2_c2{
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+		.c2_11fr{
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.c3111fr{
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.c3_oddfr{
+			grid-template-columns: 28% 34% 38%;
+		}
+		.r3_c3odd{
+			grid-template-rows: 30% 40% 30%;
+			grid-template-columns: 30% 40% 30%;
+		}
+
+		.hyt25{
+			height: 25%;
+		}
+		.hyt50{
+			height: 50%;
+		}
+		.center{
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		body{
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			margin: 40px 30px;
+		}
+
+		/*----whole layout design----*/
+		.main{
+			height: 80vh;
+			outline: 5px solid black;
+		}
+		.universal_box{
+			display: grid;
+			grid-template-rows: repeat(4, 1fr);
+		
+		}
+		.makerow{
+			border-bottom: 5px solid black;
+			width: 100%;
+			height: 132px;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			
+		}
+		.makerow:last-child{
+			border-bottom: none;
+		}
+
+
+		.makecolumn{
+			height: 100%;
+			border-right: 5px solid black;
+		}
+		.makecolumn:last-child{
+			border-right: none;
+		}
+
+		/*------row 1 starts-------*/
+
+
+		.minirow1{
+			width: 100%;
+			height: 50%;
+		}
+		.minirow1:nth-child(1){
+			background: #870016;
+			border-bottom: 2px solid black;
+		}
+		.minirow1:nth-child(2){
+			background: #fdf100;
+		}
+
+		.minicol1{
+			height: 100%;
+			/*width: 49%;*/
+		}
+		.minicol1:nth-child(1){
+			background: #23b14d;
+			border-right: 2px solid black;
+		}
+		.minicol1:nth-child(2){
+			background: #3f47cc;
+			
+		}
+
+		.minirow2{
+			width: 100%;
+			
+		}
+		.minirow2:nth-child(1){
+			height: 30%;
+			background: #fdc90c;
+			border-bottom: 2px solid black;
+		}
+		.minirow2:nth-child(2){
+			height: 35%;
+			background: #7092bf;
+			border-bottom: 2px solid black;
+		}
+		.minirow2:nth-child(3){
+			height: 35%;
+			background: #ec1b24;
+		}
+
+		.minicol2{
+			height: 100%;
+		}
+		.minicol2:nth-child(1){
+			/*width: 28%;*/
+			background: #3f47cc;
+			border-right: 2px solid black;
+		}
+		.minicol2:nth-child(2){
+			/*width: 34%;*/
+			background: #7f7f7f;
+			border-right: 2px solid black;
+		}
+		.minicol2:nth-child(3){
+			/*width: 38%;*/
+			background: #ed1b24;
+		}
+
+
+		.makebox1{
+			background: #c3c3c3;
+			border-right:2px solid black;
+		}
+		.makebox2{
+			background: #c7bfe6;
+		}
+		.makebox3{
+			background: #c7bfe6;
+			border-right:2px solid black;
+			border-top:2px solid black;
+		}
+		.makebox4{
+			background: #c3c3c3;
+			border-top:2px solid black;
+		}
+
+		/*------row 1 ends-------*/
+
+		.centerbox{
+			width: 60%;
+			height: 60%;
+			background: #9ad9ea;
+			border: 2px solid black;
+		}
+		.minirow3{
+			height: 50%;
+		}
+		.minirow3:first-child{
+			background: #efe3af;
+			border-bottom: 2px solid black;
+		}
+		.minirow3:last-child{
+			background: #fef200;
+		}
+		.minicol3{
+			background: #7092bf;
+			border-left: 2px solid black;
+		}
+
+
+		.minicol4{
+			background: #feaec9;
+			border-right: 2px solid black;
+		}
+		.minirow4{
+			height: 50%;
+		}
+		.minirow4:first-child{
+			background: #00a3ed;
+			border-bottom: 2px solid black;
+		}
+		.minirow4:last-child{
+			background: #c3c3c3;
+		}
+
+
+		.minicol15{
+			background: #c3c3c3;
+			border-right: 2px solid black;
+		}
+		.minicol25{
+			background: #c7bfe5;
+		}
+		.makebox21{
+			background: #ffc900;
+			border-left: 2px solid black;
+		}
+		.makebox31{
+			background: #ffc900;
+			border-top: 2px solid black;
+		}
+		.makebox41{
+			background: #d38eeb;
+			border-left: 2px solid black;
+			border-top: 2px solid black;
+		}
+
+		.minirow5{
+			height: 50%;
+		}
+		.minicol15{
+			background: #00a3e8;
+			border-right: 2px solid black;
+		}
+		.minicol25{
+			background: #23b14d;
+			border-right: 2px solid black;
+		}
+		.minicol35{
+			background: #00a3e8;
+		}
+
+
+		.minirow5{
+			border-top: 2px solid black;
+		}
+		.minicol51{
+			background: #b5e51d;
+			border-right: 2px solid black;
+		}
+		.minicol52{
+			background: #9ad9ea;
+		}
+
+
+		/*------row 2 ends-------*/
+		.minrow1{
+			height: 50%;
+		}
+		 .bbtm{
+			border-bottom: 2px solid black;
+			background: #fff;
+		}
+
+
+
+
+
+
+
+
+
+		/*------row 3 ends ------*/
+
+		.centerbox3{
+			width: 70%;
+			height: 70%;
+			border: 3px solid black;
+		}
+		
+
+
+		.makebox5{
+			background: #d38eeb;
+		}
+		.makebox5:nth-child(1){
+			border-bottom: 2px solid black;
+		}
+		.makebox5:nth-child(2){
+			border-left: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+		.makebox5:nth-child(4){
+			border-left: 2px solid black;
+		}
+
+
+		.circle1{
+			height: 50%;
+			width: 50%;
+			background: #da9ea2;
+			border-radius: 50%;
+			border: 3px solid black;
+		}
+		
+		.c_outer{
+			width: 60%;
+			height: 60%;
+			background: #000;
+		}
+		.c_inner{
+			position: absolute;
+			width: 90%;
+			height: 90%;
+			background: #d38eeb;
+		}
+		.makebox6{
+			background: #880016;
+		}
+		.makebox6:nth-child(1){
+			border-bottom: 2px solid black;
+		}
+		.makebox6:nth-child(2){
+			border-left: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+		.makebox6:nth-child(4){
+			border-left: 2px solid black;
+		}
+
+
+
+		/*----- row 4 ends -------*/
+		.text{
+			width: 33vw;
+			height: 80vh;
+			background-color: transparent;
+			padding: 35px 5px 35px 20px;
+		}
+		h1{
+			font-size: 28px;
+		}
+		p{
+			margin: 30px  20px;
+			font-size: 22px;
+		}
+	</style>
+</head>
+<body>
+	<section class="main">
+		<div class="universal_box">
+			<div class="makerow">
+				<div class="makecolumn">
+					<div class="minirow1"></div>
+					<div class="minirow1"></div>
+				</div>
+				<div class="makecolumn in_grid c2_11fr">
+					<div class="minicol1"></div>
+					<div class="minicol1"></div>
+				</div>
+				<div class="makecolumn">
+					<div class="minirow2"></div>
+					<div class="minirow2"></div>
+					<div class="minirow2"></div>
+				</div>
+				<div class="makecolumn in_grid c3_oddfr">
+					<div class="minicol2"></div>
+					<div class="minicol2"></div>
+					<div class="minicol2"></div>
+				</div>
+				<div class="makecolumn in_grid r2_c2">
+					<div class="makebox1"></div>
+					<div class="makebox2"></div>
+					<div class="makebox3"></div>
+					<div class="makebox4"></div>
+				</div>
+			</div>
+
+			<!-- row 1 ends -->
+
+
+
+			<div class="makerow">
+				<div class="makecolumn bgskyblu">
+					<div class="centerbox center"></div>
+				</div>
+				<div class="makecolumn in_grid c2_11fr">
+					<div class="minicol3">
+						<div class="minirow3"></div>
+						<div class="minirow3"></div>
+					</div>
+					<div class="minicol3"></div>
+				</div>
+				<div class="makecolumn in_grid c2_11fr">
+					<div class="minicol4"></div>
+					<div class="minicol4">
+						<div class="minirow4"></div>
+						<div class="minirow4"></div>
+					</div>
+				</div>
+				<div class="makecolumn in_grid r2_c2">
+					<div class="makebox11 in_grid c2_11fr">
+						<div class="minicol15"></div>
+						<div class="minicol25"></div>
+					</div>
+					<div class="makebox21"></div>
+					<div class="makebox31"></div>
+					<div class="makebox41"></div>
+				</div>
+				<div class="makecolumn">
+					<div class="minirow5 in_grid c3111fr">
+						<div class="minicol15"></div>
+						<div class="minicol25"></div>
+						<div class="minicol35"></div>
+					</div>
+					<div class="minirow5 in_grid c2_11fr">
+						<div class="minicol51"></div>
+						<div class="minicol52"></div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- row 2 ends -->
+
+
+
+			<div class="makerow">
+				<div class="makecolumn">
+					<div class="minrow1 bbtm"></div>
+					<div class="minrow1 in_grid c3111fr">
+						<div class="minicol16 bor pinkbg"></div>
+						<div class="minicol26 bor bg_d_green"></div>
+						<div class="minicol36 greybg"></div>
+					</div>
+				</div>
+
+				<div class="makecolumn in_grid c2_11fr">
+					<div class="mincol1 in_grid c2_11fr">
+						<div class="minmincol1 bg_d_green bor"></div>
+						<div class="minmincol1 pinkbg bor"></div>
+					</div>
+					<div class="mincol1">
+						<div class="minrow2 hyt25 bob"></div>
+						<div class="minrow2 hyt25 yellowbg bob"></div>
+						<div class="minrow2 hyt25"></div>
+						<div class="minrow2 hyt25 bgtan bot"></div>
+					</div>
+				</div>
+				<div class="makecolumn">
+					<div class="minrow3 hyt25 bgtan bob"></div>
+					<div class="minrow3 hyt25 bgbisk bob"></div>
+					<div class="minrow3 hyt50 in_grid c3111fr">
+						<div class="mincol2 bg_d_green bor"></div>
+						<div class="mincol2 bor"></div>
+						<div class="mincol2 bg_d_green"></div>
+					</div>
+				</div>
+				<div class="makecolumn in_grid r2_c2">
+					<div class="minbox5 bg_d_green bob bor"></div>
+					<div class="minbox5 bob"></div>
+					<div class="minbox5 pinkbg bor"></div>
+					<div class="minbox5 greybg"></div>
+				</div>
+				<div class="makecolumn in_grid r3_c3odd">
+					<div class="minrowcol  bob bor"></div>
+					<div class="minrowcol bgbisk bob bor"></div>
+					<div class="minrowcol greybg bob"></div>
+					<div class="minrowcol bg_d_green bob bor"></div>
+					<div class="minrowcol pinkbg bob bor"></div>
+					<div class="minrowcol bg_d_green bob"></div>
+					<div class="minrowcol bgbisk bor"></div>
+					<div class="minrowcol greybg bor"></div>
+					<div class="minrowcol "></div>
+				</div>
+			</div>
+
+
+
+
+			<!-- row 3 ends -->
+
+
+
+
+			<div class="makerow">
+				<div class="makecolumn bgskyblu">
+					<div class="centerbox3 center greybg">
+						<div class="centerbox3 center bgskyblu">
+							<div class="centerbox3 center greybg"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="makecolumn in_grid r2_c2">
+					<div class="makebox5">
+						<div class="centerbox center"></div>
+					</div>
+					<div class="makebox5">
+						<div class="centerbox center"></div>
+					</div>
+					<div class="makebox5">
+						<div class="centerbox center"></div>
+					</div>
+					<div class="makebox5">
+						<div class="centerbox center"></div>
+					</div>
+				</div>
+				<div class="makecolumn">
+					<div class="circle1 center"></div>
+				</div>
+				<div class="makecolumn yellowbg">
+					<div class="circle1  center c_outer">
+						<div class="circle1 center c_inner"></div>
+					</div>
+				</div>
+				<div class="makecolumn in_grid r2_c2">
+					<div class="makebox6">
+						<div class="circle1 center"></div>
+					</div>
+					<div class="makebox6">
+						<div class="circle1 center"></div>
+					</div>
+					<div class="makebox6">
+						<div class="circle1 center"></div>
+					</div>
+					<div class="makebox6">
+						<div class="circle1 center"></div>
+					</div>
+				</div>
+			</div>
+			<!-- row 4 ends -->
+			
+		</div>
+		
+	</section>
+
+
+
+
+	<section class="text">
+		<h1>HTML CSS 4*5 Box Layout Task</h1>
+		<p>1. Using Only HTML, CSS </p>
+		<p>2. Use any color</p>
+		<p>3. You design this tasl without use table</p>
+		<p>4. Use (Float, margin, padding, height, width, border-radius, etc)</p>
+		<p>5. Without Use Bootstrap</p>
+	</section>
+
+</body>
+</html>

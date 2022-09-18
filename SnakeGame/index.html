@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeMania - Ek Gaming Katha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="body">
+        <div class="mute">
+            <div id="volume"></div>
+            <select name="speeds" id="speeds" onchange="changespeed()">
+                <option name="speeds" value="10">level 1</option>
+                <option name="speeds" value="15">level 2</option>
+                <option name="speeds" value="20">level 3</option>
+                <option name="speeds" value="25">level 4</option>
+                <option name="speeds" value="30">level 5</option>
+                <option name="speeds" value="35">level 6</option>
+            </select>
+        </div>
+        <div id="scoreBox">Score: 0</div><button id="clearbtn" onclick="ClearScore()">Reset</button>
+        <div id="hiscoreBox">HiScore: 0 </div>
+        <div id="board"></div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

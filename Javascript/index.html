@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>JavaScript</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: aqua;
+    }
+
+    .header {
+        height: 45px;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(188, 199, 211, 0.5);
+    }
+
+    .logo h2 {
+        color: blue;
+    }
+
+    .menu {
+        display: inline-flex;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        display: inline-flex;
+
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: blue;
+        font-size: large;
+        margin: 0 20px;
+    }
+
+    .toggle button {
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        top: 4px;
+        right: 20px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .toggle button:nth-child(2) {
+        display: none;
+    }
+
+
+    .fas {
+        color: blue;
+        font-size: 26px;
+    }
+    .model3D{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .randombox{
+        text-align: center;
+            width: 300px;
+            height: 300px;
+            
+            border-radius: 150px;
+            border: 10px solid #fff;
+            box-shadow: 0 5px 0 #ccc,
+                            inset 0 5px 0 #ccc;
+            /* background: grey; */
+            /* transform: translateZ(30deg); */
+            transform-style: preserve-3d;
+            transform: perspective(300px) rotateX(60deg);
+            z-index: -1;
+        }
+        .cubeModel{       
+            transform-style: preserve-3d;
+               
+        }
+        
+        
+        /* .box{
+            
+            width: 150px;
+            height: 150px;
+            border: 1px solid white;
+        } */
+
+
+
+
+        
+    @media only screen and (max-width:520px) {
+
+
+        body {
+            background-color: yellow;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .toggle button {
+            display: block;
+        }
+
+        .toggle button:hover {
+            /*display: block;*/
+            background-color: skyblue;
+        }
+
+
+
+
+
+
+        
+
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <h2>My logo</h2>
+
+        </div>
+        <div class="menu">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Work</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="toggle">
+            <div class="togglemenu">
+                <button type="button" id="menushow"><i class="fas fa-bars"></i></button>
+                <button type="button" id="menuhide"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="model3D">
+            <div class="cubeModel">
+                <div class="box front"></div>
+                <div class="box back"></div>
+                <div class="box left"></div>
+                <div class="box right"></div>
+                <div class="box top"></div>
+                <div class="box bottom"></div>
+            </div>
+        <div class="randombox"></div>
+        </div>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, error.
+</p>
+
+
+
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6554179651653!2d77.31788221440593!3d28.580108293203935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45afd79679f%3A0x9f4fd78d5bad2966!2sCroma%20Campus%20Training%20%26%20Development%20(P)%20Ltd.!5e0!3m2!1sen!2sin!4v1628246343776!5m2!1sen!2sin" width="400" height="350" allowfullscreen="" loading="lazy"></iframe> -->
+
+    <!-- 
+<input type="text" id="age" value="18">
+<button onclick="myFunc()">verify your age</button> -->
+
+    <script>
+        /*  for (i = 1; i <= 5; i++)
+           {
+            for (j = 1; j <= i; j++)
+             {
+                document.write("@"); 
+                }
+                document.write("<br>");
+        }
+        
+        
+        var x=1;
+        while(x<=5){
+            var y=1;
+                while (y<=x) {
+                    document.write("*");
+                    y++;           
+                }
+            document.write("<br>");
+            x++;
+        } */
+        // var a=1;
+        // var b=1;
+        // do {
+            //     document.write("#");
+        //     a++;   
+        // do {
+        //     document.write("<br");
+        //     b++;
+        // } while (b<=a);
+        // }
+        // while (a<=5);
+
+
+        // let tasks = ['HTML', 'CSS' ,'Javascript', 'JQuery' , 'Bootstrap'];
+        // delete tasks[4];
+        // for(a=0;a<=5;a++){
+        //     for (b=5, b<=a,b++ ) {
+        //         document.write(a);        
+        //     }   
+        //     document.write("<br>");
+        // }
+
+        // let x = 1;
+        // let y = 1
+        // while (x <= 500) {
+        //     while (y <= x) {
+        //         document.write(`${x} * ${y} = ${x * y}  `);
+        //         y++
+        //     }
+        //     document.write(" , ")
+        //     x++
+
+        // }
+
+
+
+        let profile = {
+            fName:"aaquib",
+            lName:"ali",
+            age:23,
+            hobbies:['internet surfing','coding','computer operating','playing games'],
+            favMovies:{
+                salman:'ready',
+                john:'satyamev jayate',
+                varun:'dhishoom'
+            },
+            fullName:function() {return this.fName + " " + this.lName},           //method 1
+            package:() =>{ return 415000 ;},                                       // method 2
+            skinColor(){ return 'wheatish' ;}                                          //method 3
+        }
+
+        document.write(`${profile.fName} ${profile.lName} <br/>`);
+
+        document.write(profile.fullName()+"<br/>");
+
+        document.write(profile.age+"<br/>");
+
+        document.write(profile.skinColor() +"<br/>");
+
+        document.write(`${profile.hobbies[0]} , ${profile.hobbies[1]} , ${profile.hobbies[2]} <br/>`);
+
+        document.write(profile.favMovies.salman + "<br/>");
+
+        document.write(profile.favMovies.varun + "<br/>");
+
+        document.write(profile.package()+"<br/>");
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

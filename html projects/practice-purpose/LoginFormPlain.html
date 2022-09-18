@@ -1,0 +1,148 @@
+l
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: radial-gradient(rgb(255,255, 255), rgb(100, 100, 100)) ;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 2s;
+    }
+
+    .container {
+      width: 420px;
+      height: 450px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+    }
+
+    .container a {
+      text-decoration: none;
+    }
+
+    h3 {
+      text-align: center;
+      color: rgb(255, 255, 255);
+      padding: 20px 10px;
+    }
+
+    .loginoption {
+      display: inline-flex;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .loginoption .fbbtn {
+      padding: 5px 15px;
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      margin-right: 20px;
+    }
+
+    .loginoption .twbtn {
+      background-color: #00acee;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 5px 15px;
+      justify-self: right;
+    }
+
+    .credentials {
+      width: 100%;
+      display: block;
+      padding: 15px;
+    }
+
+    .credentials input[type=text] {
+      width: 100%;
+      margin: 10px 0px;
+      background-color: transparent;
+      padding: 5px 0px;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+    }
+
+    .credentials input[type=password] {
+      width: 100%;
+      margin: 10px 0px;
+      padding: 5px 0px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+    }
+
+    .credentials input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .credentials p {
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .credentials input[type=checkbox] {
+      font-size: 10px;
+    }
+
+    .loginbtn {
+      background-color: #2B6AD0;
+      color: white;
+      width: 100%;
+      border: none;
+      border-radius: 3px;
+      padding: 5px 15px;
+      position: relative;
+      bottom: -25px;
+      left: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <h3>Sign up. It's fast and easy.</h3>
+      <div class="loginoption">
+        <a href="https://facebook.com/" class="fbbtn">Sign in with Facebook</a>
+        <a href="https://twitter.com/" class="twbtn">Sign in with Twitter</a>
+      </div>
+      <form>
+        <div class="credentials">
+          <input type="text" placeholder="Enter Username">
+          <input type="text" placeholder="Enter Email Address">
+          <input type="password" placeholder="Enter Password">
+          <input type="password" placeholder="Confirm Password">
+          <p>
+            <input type="checkbox" checked="check"> I accept terms and conditions.
+          </p>
+          <button class="loginbtn" type="submit">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>

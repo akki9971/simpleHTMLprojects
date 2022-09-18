@@ -1,0 +1,15 @@
+*{ margin:0; padding:0; } body { background: #9c27b0; min-height:100vh; width:100%;
+justify-content:center; align-items:center;} .circle{ position:absolute; width:300px;
+height:300px; transform-style:preserve-3d; } .circle span { position:absolute;
+display:block; box-shadow:0 5px 0 #ccc, inset 0 5px 0 #ccc; box-sizing:border-box;
+border:5px solid #fff; border-radius:50%; } .circle span:nth-child(1){ width:400px;
+height:400px;}
+
+<!--
+Visual Code Mobile
+Developed By Manish Nirmal
+App Available on Play Store :-
+https://play.google.com/store/apps/details?id=lk.visual.code.mobile
+YouTube :-
+https://youtube.com/ManishNirmal
+-->

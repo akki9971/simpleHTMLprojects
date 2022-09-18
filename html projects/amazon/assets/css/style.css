@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+body{
+    background: rgb(231, 227, 227);
+}.bg-amazon-header{
+    background: #171e27;
+}
+.bg-amazon-nav{
+    background: #232f3e;
+}
+.g-amazon-dark{
+    background:#131a22;
+}
+.bg-orange{
+    background: orange;
+}
+.x-small{
+    font-size: 12px;
+}
+.xx-small{
+    font-size: 8px;
+}
+.small{
+    font-size: 15px;
+}
+.mt_-1{
+    margin-top: -0.5em;
+}
+.mt_-2{
+    margin-top: -1em;
+}
+.mt_-3{
+    margin-top: -1.5em;
+}
+.mb_-1{
+    margin-bottom: -0.5em;
+}
+.mb_-2{
+    margin-bottom: -1em;
+}
+.mb_-3{
+    margin-bottom: -1.5em;
+}
+a:hover{
+    border: 1px solid #fff;
+}
+#carouselExampleControls{
+    z-index: -1;
+}
+.page-banners .carousel-item img{
+    width: auto;
+    height: 75vh;
+}
+
+.hero-cards-1{
+    margin-top: -150px;
+    z-index: 5;
+}
+.hero-cards img{
+    width: inherit;
+
+    }
+.horizon-slider{
+    margin: 15px;
+    background: white;
+
+}
+.horizon-slider h4{
+    margin: 5px 15px;
+}
+.horizon-slider div{
+    overflow: auto;
+    white-space: nowrap;
+}
+.horizon-slider div div{
+    display: inline-block;
+    margin: 10px 20px;
+    
+}
+
+.mystickynav{
+    position: sticky;
+    top: 0;
+}
+/* ::-webkit-scrollbar{
+    height: 8px;
+    background: white;
+}
+::-webkit-scrollbar-track{
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(71, 145, 255);
+    border-radius:5px;
+} */
+

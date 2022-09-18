@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+</head>
+<body>
+
+
+<form name="myform" onsubmit="return validateData()" >
+	Full Name:<input type="text" name="uname" id="un" class="example"><br><br>
+	Mobile:<input type="text" name="mobile" ><br><br>
+	Gender:<input type="radio" name="Gender" value="Male" > Male 
+			<input type="radio" name="Gender" value="Female" >Female<br><br>
+	Email:<input type="text"  id="email"><b id="error"></b><br><br>
+	Address:<textarea cols="8" rows="4" name="add"></textarea><br><br>
+	<input type="submit"  value="Submit">
+</form>
+<script>
+	var alphaExp = /^[a-zA-Z\s]+$/;
+	var numExp=/^[0-9]*$/;
+	// var alphaNumExp = /^[a-zA-Z0-9]+$/;
+	// var alphaNumSpaceExp = /^[a-zA-Z0-9\s]+$/;
+	var alphaAddExp = /^[a-zA-Z0-9\s,.'-]{3,}$/;
+	var emailExp = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;	
+
+	function validateData() {
+		 //var x = document.getElementsByTagName("input")[0].value;
+		// var x = document.getElementsByName("uname")[0].value;
+		//var x = document.getElementsByClassName("example")[0].value;
+		var x=document.getElementById('un').value;
+		//var x=document.forms['myform']['uname'].value;
+		//var x=document.myform.uname.value;
+		if(x=="")
+		{
+			alert("Please select Full Name");
+			document.getElementById('un').focus();
+			//document.forms['myform']['uname'].focus();
+			return false;
+		}
+		if(!x.match(alphaExp)){
+
+			alert("Your name should be character only.");
+			document.getElementById('un').focus();
+			//document.forms['myform']['uname'].focus();
+			return false;
+		}
+
+		
+		/*mobile validation code*/
+
+		var x=document.forms['myform']['mobile'].value;
+		if(x=="")
+		{
+			alert("Please select Mobile No.");
+			document.forms['myform']['mobile'].focus();
+			return false;
+		}
+		if(!x.match(numExp) || isNaN(x) )
+		{
+			alert("Your Mobile No. should be Numeric");
+			document.forms['myform']['mobile'].focus();
+			return false;
+		}
+		if( x.length<10 || x.length>12)
+		{
+			alert("Your Mobile No. should be between 10 to 12 in length");
+			document.forms['myform']['mobile'].focus();
+			return false;
+		}
+
+		//////////////gender validation
+
+		//var x=document.getElementsByName('Gender');
+		var x=	document.forms['myform']['Gender'];
+		//var x= document.myform.Gender;
+			if (!(x[0].checked || x[1].checked)) {
+			    alert("Please Select Your Gender");
+			    return false;
+			}
+
+			
+		//////email validation
+		var x=document.getElementById('email').value;
+		if(x=="")
+		{
+			// alert("Please select Email Id");
+			document.getElementById('error').innerHTML="<i>Please select Email Id</i>";
+		
+			document.getElementById('error').style="color:yellow; background-color:red;";
+			// document.getElementById('error').style.color="yellow";
+			//document.getElementById('error').style.cssText = "background-color:pink;color:white;"
+			document.getElementById('email').focus();
+			return false;
+		}
+		if(!x.match(emailExp)){
+
+			alert("Your Email should be Valid.");
+			document.getElementById('error').innerText="<i>Your Email should be Valid.<i>";
+			document.getElementById('email').focus();
+			
+			return false;
+		}
+	//////////////address validation
+		var x=document.forms['myform']['add'].value;
+		if(x=="")
+		{
+			alert("Please select Address");
+		
+			document.forms['myform']['add'].focus();
+			return false;
+		}
+		if(!x.match(alphaAddExp)){
+
+			alert("Your Address should be valid.");
+			
+			document.forms['myform']['add'].focus();
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

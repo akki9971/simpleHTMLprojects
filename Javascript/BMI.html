@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calc</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(172, 171, 168);
+            
+        }
+        .container{
+            width: 350px;
+            height: 300px;
+            position: absolute;
+            top: 29%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #fff;
+            background: rgb(228, 207, 125);
+            padding: 15px;
+            
+        }
+        h2{
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        input{
+            width: 80%;
+            /* height: 25px; */
+            margin:5px  10%;
+            padding: 5px;
+
+        }
+        #btn, #feet2cm{
+        
+            background: rgb(64, 172, 214);
+            border: none;
+        }
+        .minicalc {
+            width: 350px;
+            height: 220px;
+            position: absolute;
+            top: calc(30% + 270px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #fff;
+            background: rgb(228, 207, 125);
+            padding: 15px;
+        } 
+        .minicalc h2{
+            margin-bottom: 10px;
+        }
+        .minicalc p{
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>BMI Calculator</h2>
+        <div class="form">
+            <form>
+                <input type="text" id="weight" placeholder="Weight in Kg"/>
+                <input type="text" id="height" placeholder="Height in cms"/>
+
+                <input type="button" value="Check now" id="btn">
+                <input type="text" id="bmivalue" />
+                <input type="text" id="result" />
+            </form>
+        </div>
+
+    </div>
+    <div class="minicalc">
+        <h2>Feet to CMs</h2>
+        <p>If you don't know your height in centimeters, You can convert to it here.</p>
+        <input type="text"  id="feet" placeholder="Feets">
+        <input type="text"  id="inch" placeholder="Inches">
+        <input type="button"  id="feet2cm" value="Convert" onclick="convrtr()">
+    </div>
+
+
+
+    <script>
+        document.getElementById('btn').addEventListener("click", bmicalc);
+
+        function bmicalc() {
+            let x = document.getElementById('weight').value;
+            let y = document.getElementById('height').value;
+
+            let xnum= Number(x);
+            let ynum= Number(y)/100;
+            let ynum2= ynum*ynum;
+
+            let bmi= xnum/ynum2;
+            let bmiprec= Math.round(bmi * 10) / 10;
+            document.getElementById('bmivalue').value=bmiprec;
+            if (x === "" || y === ""){
+                alert("Enter proper weight and height.");
+
+            }else
+            if (bmiprec <= 18.5) {
+                document.getElementById('result').value="You are too skinny. Gain some weight";
+            }
+            else if(bmiprec < 25){
+                document.getElementById('result').value="You are absolutely Fit n Fine.";
+            }
+            else if( bmiprec < 30) {
+                document.getElementById('result').value="You are over-weighted"; 
+             }        
+            else if( bmiprec > 30) {
+                document.getElementById('result').value="You are in obesity range."; 
+             }        
+               
+        }
+
+        
+        function convrtr() {
+            let a = document.getElementById('feet').value;
+            let b = document.getElementById('inch').value;
+
+            let anum= Number(a)*12;
+            let bnum= Number(b);
+            let absum= (anum+bnum)*2.5;
+            let absum2 = Math.ceil(absum) 
+            console.log(absum2);
+            document.getElementById('height').value=absum2;         
+        }
+    </script>
+    </body>
+</html>

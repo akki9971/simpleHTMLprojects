@@ -1,0 +1,131 @@
+.sticky {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+  border-top: 1px solid red;
+  background: rgba(255, 255, 255, 0.9 );
+}
+.head a{
+  all: unset;
+  color: gray;
+}
+.head .fas{
+  color: #3DB2FF;
+  margin-right: 10px;
+}
+.social-icon a{
+  margin: 0 8px;
+}
+.social-icon a:hover{
+  color: #3DB2FF;
+}
+.mybtn{
+  position: relative;
+  left: 1px;
+  background: white;
+  border: 1px solid lightgray;
+    border-radius: 5px 0 0 5px;
+}.myinp{
+   border-radius: 0 5px 5px 0;
+}
+.viplogin{
+  background: rgb(0, 201, 77);
+}
+.demo-section{
+  height: 75vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+	background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(../images/bg_image_1.jpg);
+}
+.demo-section h1{
+  letter-spacing: 1px;
+  font-size: 50px !important;
+  margin-top: -10px !important;
+}
+.demo-section p{
+  letter-spacing: 3px;
+}
+.demo-section .anime1{
+  animation: anime1 1s linear;
+}
+@keyframes anime1 {
+  0%{
+    
+    transform:translate(-50%, -50%) scale(0);
+  }
+  30%{
+    
+    transform:translate(-50%, -50%) scale(0);
+  }
+  100%{
+    transform:translate(-50%, -50%) scale(1);
+
+  }
+}
+
+
+
+.my-hero-cards{
+  margin-top: -50px;
+}
+/* DEMO-SPECIFIC  STYLES  --about section------ */
+.typewriter {
+  
+  box-sizing: content-box;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 4s steps(30, end),
+    blink-caret .5s step-end 10;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.info .img-demo img{
+  max-width: inherit;
+}
+
+/* --- owl carousel --- */
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media all and (max-width:576px){
+  .demo-section{
+    height: 60vh;
+  }
+  .demo-section h1{
+    font-size: 32px !important;
+  }
+  .demo-section p{
+    font-size: 20px !important;
+    padding-left: 5px !important;
+  }
+  .my-hero-cards{
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+

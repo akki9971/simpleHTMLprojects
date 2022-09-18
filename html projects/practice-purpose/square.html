@@ -1,0 +1,75 @@
+    <!doctype html>
+      <html>
+
+      <head>
+        <title>circle making</title>
+        <meta name="viewport" charset="utf-8" content="width=device-width">
+        <style>
+        *{margin:0; padding:0; box-sizing:border-box;}
+        body{background:radial-gradient(#78d5ff, #0081e8);
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          min-height:100vh;
+        }
+        .square {width:300px;
+          height:300px;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          transform-style:preserve-3d;
+          transform: perspective(900px) rotateX(60deg);}
+
+          .square span {width:100%;
+            position:absolute;
+            display:block;
+            box-sizing:border-box;
+            box-shadow:0 10px 0 #e0e0e0, inset 0 10px 0 #e0e0e0;
+            border: 15px solid #fff;
+            border-radius: 20%;
+            animation: animate 10s ease-in-out infinite;}
+
+            .square span:nth-child(1){
+              animation-delay:0s;
+            }
+            .square span:nth-child(2){
+              animation-delay:2s;
+            }
+            .square span:nth-child(3){
+              animation-delay:4s;
+            }
+            .square span:nth-child(4){
+              animation-delay:6s;
+            }
+
+            @keyframes animate{
+              0%{transform: translateZ(-100px);
+                width:100%;
+                height:100%;}
+                25%{transform: translateZ(100px);
+                  width:100%;
+                  height:100%;}
+                  50%{transform: translateZ(100px);
+                    width:30%;
+                    height:30%;}
+                    75%{transform: translateZ(-100px);
+                      width:30%;
+                      height:30%;}
+                      100%{transform: translateZ(-100px);
+                        width:100%;
+                        height:100%;}
+                      }
+                    </style>
+                  </head>
+
+                  <body>
+                    <div class=" square">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+
+                    </div>
+                  </body>
+
+                  </html>

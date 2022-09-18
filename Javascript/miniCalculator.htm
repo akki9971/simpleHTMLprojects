@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: chocolate;
+        }
+        
+        .calculator{
+            padding: 30px 10px;
+            width: 350px;
+            height: 300px;
+            background: coral;
+            border: 2px solid #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        input{
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 2px;
+            margin-bottom: 15px;
+        }
+        button{
+            
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 2px;
+            
+        }
+        p{
+            margin-top: 40px;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="num1" >
+            <input type="text" id="num2" >
+
+            <button type="button" id="addition">Sum</button>
+            <button type="button" id="Subtraction">Subtract</button>
+            <button type="button" id="Multiplication">Multiply</button>
+            <button type="button" id="division">Divide</button>
+            <p id="result"></p>
+
+        </div>
+    </div>
+    
+    <script>
+
+        document.getElementById('addition').addEventListener("click", sum);
+        document.getElementById('Subtraction').addEventListener("click", sub);
+        document.getElementById('Multiplication').addEventListener("click", multi);
+        document.getElementById('division').addEventListener("click", divide);
+        
+            // var x = document.getElementById('num1').value;
+            // var y = document.getElementById('num2').value;
+            let results = document.getElementById('result');
+      
+        function sum() {
+            // let Add = x + y;
+
+            var x = document.getElementById('num1').value;
+            var y = document.getElementById('num2').value;
+            let Add= Number(x)+Number(y);
+            results.innerHTML = "Sum is: " + Add; 
+            
+        }
+        function sub() {
+
+            var x = document.getElementById('num1').value;
+            var y = document.getElementById('num2').value;
+            let minus= Number(x) - Number(y);
+            results.innerHTML = "Subtraction is: " + minus ; 
+            
+        }
+        function multi() {
+
+            var x = document.getElementById('num1').value;
+            var y = document.getElementById('num2').value;
+            let multiply= Number(x) * Number(y);
+            results.innerHTML = "Multiplication is: " + multiply ; 
+            
+        }
+        function divide() {
+
+            var x = document.getElementById('num1').value;
+            var y = document.getElementById('num2').value;
+            let devide= Number(x) / Number(y);
+            results.innerHTML = "division is: " + devide; 
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .circular-loader{
+            display: flex;justify-content: center;
+        }
+        .loader{
+            width: 100px; 
+            height:100px;
+            background:black;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .loader::before{
+            width: 15%;
+            height: 110%;
+            content: '';
+            position: absolute;
+            background: linear-gradient(red,blue);
+            animation: animate 3s linear infinite;
+        }
+        .loader::after{
+            
+            content: 'loading';
+            /* content: ''; */
+            position: absolute;
+            inset: 5px;
+            background: inherit;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: red;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 3px rgb(0, 0, 255);
+        }
+        @keyframes animate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circular-loader">
+        <div class="loader">
+        </div>
+    </div>
+</body>
+</html>

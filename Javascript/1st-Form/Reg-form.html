@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Registration form</title>
+</head>
+
+<body>
+  <div class="body">
+    <div class="container">
+      <div class="intro">
+        <h2>Create Account</h2>
+        <p>Get started with your free account</p>
+      </div>
+      <div class="user">
+        <form autocomplete="off" onsubmit="return validation()" >
+          <!-- <p id="demo"></p> -->
+          <input type="text" placeholder="Full Name" class="name" id="name" />
+          <input type="email" placeholder="Email address" class="mailus" id="mailus" />
+          <div class="dob-gen">
+            <input type="date" class="dob" required/>
+            <select class="gender" >
+              <option value=""> -Gender-</option>
+              <option value="v1">Male</option>
+              <option value="v2">female</option>
+              <option value="v3">Any Other</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Phone No." id="phone" maxlength="10" />
+
+          <input type="password" placeholder="Password" class="passwrd"  />
+          <input type="password" placeholder="Confirm Password" class="passwrd"  />
+          <p class="terms">
+            <input type="checkbox" checked class="check" />&nbsp;accept terms
+            and conditions*
+          </p>
+          <input type="submit" value="Create Account" />
+          <!-- <button type="reset">Clear Data</button> -->
+        </form>
+        <p class="login">Already have an account? <a href="#">Log In</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

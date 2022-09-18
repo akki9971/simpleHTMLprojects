@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <head>
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+}
+.topic {
+    align-items: center;
+}
+h1 {color: tomato;
+    font-size: 80px;
+    margin: 50px 0px;
+}
+h2 {margin-top: 30px;
+    font-size: 40px;
+    color: tomato;
+    animation: heartbeat 0.8s infinite ;
+}
+.heart {
+    top: 50%;
+    left: 33%;
+    width: 240px;
+    height: 140px;
+    background-color: rgb(260, 10, 10);
+    border-radius: 0px 100px 100px 0px ;
+    transform: rotate(-45deg );
+    margin-left: 134px;
+    position: relative;
+animation: heart_beat 2s ;
+    
+}
+.heart1 {
+    top: 50%;
+    left: 33%;
+    width: 240px;
+    height: 140px;
+    background-color: rgb(260, 10, 10);
+    border-radius: 0px 100px 100px 0px ;
+    transform: rotate(-135deg );
+    margin-left: 64px;
+    position: relative;
+    margin-top: -140px;
+animation: heart_beat1 2s ease ;
+    
+
+
+}
+.heart1 p {
+    font-weight: 800;
+    font-size: 30px;
+    color: #fff;
+    transform: rotate(135deg);
+    padding-left: 124px;
+    padding-bottom: 40px;
+animation: inout 3s;
+}
+@keyframes heartbeat{
+	to { transform: scale(1.2); }
+}
+@keyframes heart_beat{ 
+0% { top: 50%;
+    left: 33%;
+    width: 240px;
+    height: 140px;
+    background-color: rgb(260, 10, 10);
+    border-radius: 0px 100px 100px 0px ;
+    transform:rotate(90deg);
+    margin-left: 134px;
+    position: relative;
+}
+100%{ top: 50%;
+    left: 33%;
+    width: 240px;
+    height: 140px;
+    background-color: rgb(260, 10, 10);
+    border-radius: 0px 100px 100px 0px ;
+    transform: rotate(-45deg );
+    margin-left: 134px;
+    position: relative;
+}
+}
+@keyframes heart_beat1{ 
+0% {top: 50%;
+    left: 33%;
+    width: 240px;
+    height: 140px;
+    background-color: rgb(260, 10, 10);
+    border-radius: 0px 100px 100px 0px ;
+    transform: rotate(0deg );
+    margin-left: 64px;
+    position: relative;
+    margin-top: -140px; }
+100% {top: 50%;
+    left: 33%;
+    width: 240px;
+    height: 140px;
+    background-color: rgb(260, 10, 10);
+    border-radius: 0px 100px 100px 0px ;
+    transform: rotate(-135deg );
+    margin-left: 64px;
+    position: relative;
+    margin-top: -140px;}}
+@keyframes inout{
+0% {display:none;}
+20%{display:block;
+transform:scale(0.3)}}
+        </style>
+
+    </head>
+    <body>
+        <div class="topic">
+            <h2>  How to make Heart in html  </h2>
+        </div>
+        <h1 class="i">I</h1>
+        <div class="heart">
+                
+
+        </div>
+        <div class="heart1">
+
+                <p> LOVE </p>
+        </div>
+        <h1 class="u">You</h1>
+
+
+    </body>
+
+
+
+
+</html>

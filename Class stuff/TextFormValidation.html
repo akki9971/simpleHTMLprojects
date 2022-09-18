@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Form Validation</title>
+
+</head>
+<body>
+	<form >
+		Name: <input type="text"   id="uname" /> <b id="nameError">* (mandatory)</b><br><br>
+		<input type="button"  value="Submit" onclick="validatedata()">
+	</form>
+
+
+<script>
+		function validatedata() 
+		{
+			var ptrn = /^[a-zA-Z\s]+$/;
+			
+			 var name1=document.getElementById('uname').value;
+			if (ptrn.test(name1)) 
+			{
+					//alert("Username is valid");
+				document.getElementById('nameError').innerHTML="Username is valid";
+				document.getElementById('nameError').style="color:green;background-color:grey;";
+
+			} 
+			else {
+				document.getElementById('nameError').innerHTML="*Username is Invalid";
+				document.getElementById('nameError').style="color:red;background-color:yellow;";	
+			}
+		}
+</script>
+</body>
+</html>
+
+ <!-- 
+	var alphaExp = /^[a-zA-Z\s]+$/;
+	var alphaNumExp = /^[a-zA-Z0-9]+$/;
+	var alphaNumSpaceExp = /^[a-zA-Z0-9\s]+$/;
+	var alphaAddExp = /^[a-zA-Z0-9\s,.'-]{10,300}$/;
+	var emailExp = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	var mobileExp =/^(?=.*\d)(?=.*[1-9]).{6,15}$/; 
+-->	 
+
+<!-- https://indianembassy-moscow.gov.in/online-registration-for-indian.php -->

@@ -1,0 +1,36 @@
+.flex {
+	display: flex;
+}
+.in-flex {
+	display: inline-flex;
+}
+.underline {
+	display: block;
+    position: absolute;
+    border-bottom: 3px solid black; 
+    width: 100px;
+    padding: 3px;
+}
+.fa {
+	padding-right:5px;
+}
+.centre {
+	margin-left:20px;
+}
+.centro{
+	margin-left:37%;
+	width:160px;
+}
+.fa-quote-left{
+	color:#225d8a;
+}
+.review1{
+	background:#fff;
+	padding:50px;
+	height:350px;
+}
+.trimg {
+	margin-left:30px;
+}
+
+

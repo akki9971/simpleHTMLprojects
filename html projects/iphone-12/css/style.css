@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: verdana, sans-serif;
+}
+body{
+ background: url(../images/background.jpg) no-repeat;
+ background-size: 100% 100vh;
+
+}
+
+.iphone{
+	position: relative;
+	left: 50%;
+	margin-top: 4%;
+	transform: translateX(-50%);
+	width: 234px;
+	height: 483px;
+	background: black;
+	border-radius: 35px;
+	border: 2px solid gold;
+	box-shadow: 0 0 5px 1px gold;
+
+
+}
+.screen{
+	width: 212px;
+	height: 460px;
+	background: url(../images/iphone-12-wallpaper-1.jpg) no-repeat;
+	background-size: 100% 100vh;
+	border-radius: 25px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.notch{
+	width: 120px;
+	height: 15px;
+	background: black;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+.notch:before{
+	content: "";
+	width: 8px;
+	height: 8px;
+	background-image: url(../images/1.png);
+	background-size: 100% 100%;	
+	position: absolute;
+	margin-left: -6px;
+
+}
+
+.notch:after{
+	content: "";
+	width: 8px;
+	height: 8px;
+	background-image: url(../images/2.png);
+	background-size: 100% 100%;	
+	position: absolute;
+	margin-left: 118px;
+
+}
+
+
+.speaker{
+	width: 40px;
+	height: 3px;
+	background: silver;
+	border-radius: 3px;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+
+}
+.camera{
+	width: 3px;
+	height: 3px;
+	background: black;
+	border-radius: 50%;
+	position: absolute;
+	left: 75%;
+	margin-top: 4px;
+	box-shadow: 0 0 1px 1px grey, inset 0 0 1px 1px silver;
+}

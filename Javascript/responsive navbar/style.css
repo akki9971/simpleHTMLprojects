@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(170, 166, 166);
+    font-family: sans-serif;
+}
+.header{
+    background:rgb(34, 44, 39);
+    /* padding:10px 0; */
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    /* padding: 5px; */
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo,
+.header .navbar{   
+    padding: 11px 15px;
+}
+.header .logo a{
+    font-size: 26px;
+}
+
+.header  a{
+    text-decoration: none;
+}
+.header .navbar ul{
+    list-style: none;
+}
+.header .navbar ul li{
+    display: inline-block;
+    line-height: 2.0;
+
+}
+.header .logo a,
+.header .navbar ul li a{
+    margin: 0 20px;
+    color: #fff;
+}
+.header .navbar ul li a.active,
+.header .navbar ul li a:hover{
+    color: rgb(241, 102, 52);
+    font-size: 17px;
+}
+.Toggler{
+    width: 32px;
+    height: 25px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    position: relative;
+    right: 30px;
+    display: none;
+}
+.Toggler:hover{
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.6);
+}
+.Toggler span{
+    width: 20px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+.Toggler span::before,
+.Toggler span::after{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Toggler span::before{
+    transform: translateY(-6px);
+
+}
+.Toggler span::after{
+    transform: translateY(6px);
+}
+
+@media (max-width: 768px){
+    .header .navbar{
+        width: 100%;
+        display: none;
+        border-top: 1px solid grey;
+        overflow: hidden;
+        padding: 0;
+    }
+    .header .navbar ul{
+        margin:10px 35px;
+    }
+    .header .navbar ul li{
+        display: block;
+    }
+    .header .navbar ul li a{
+        margin: 0;
+    }
+    .Toggler{
+        display: block;
+    }
+
+}
