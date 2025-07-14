@@ -1,17 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.logo{
+
+.logo {
     font-size: 24px;
     position: absolute;
     top: 25%;
     left: 50%;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
     text-align: center;
 }
-.date{
+
+.date {
     font-size: 24px;
     position: absolute;
     top: 50%;
@@ -21,7 +23,8 @@
     border: 1px solid grey;
     text-align: center;
 }
-.day{
+
+.day {
     font-size: 24px;
     position: absolute;
     top: 50%;
@@ -30,7 +33,8 @@
     border: 1px solid grey;
     text-align: center;
 }
-.time{
+
+.time {
     color: rgb(28, 28, 51);
     font-size: 24px;
     position: absolute;
@@ -40,27 +44,20 @@
     /* border: 1px solid rgb(32, 15, 133); */
     text-align: center;
 }
-#clockcontainer{
-    margin:10px auto;
+
+#clockcontainer {
+    margin: 10px auto;
     width: 42vw;
-    height: 42vw;
+    aspect-ratio: 1/1;
     background: url(analog.png) no-repeat;
     background-size: 100%;
     position: relative;
     border-radius: 50%;
 }
-/* #clockcontainer::before{
-    content: '';
-    position: absolute;
-    width:43vw;
-    height: 43vw;
-    background: red;
-    z-index: -10;
-    border-radius: 50%;
-    top: -8px;
-    left: -8px;
-} */
-#hour, #minute, #second{
+
+#hour,
+#minute,
+#second {
     position: absolute;
     /* clip-path: polygon(50% 0,100% 20%,80% 50%, 100% 100%, 0 100%,20% 50%, 0 20%); */
     border-radius: 15px;
@@ -68,65 +65,73 @@
     top: 50%;
     left: 50%;
 }
-#center{
-    width: 5%;
-    height: 5%;
+
+#center {
+    width: 8%;
+    aspect-ratio: 1/1;
     background: rgb(39, 39, 59);
     border-radius: 50%;
     /* border: 10px solid black; */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%);  
-    z-index: 99;  
+    transform: translate(-50%, -50%);
+    z-index: 99;
 }
-#hour{
+
+#hour {
     width: 3%;
     height: 35%;
     background: rgba(0, 0, 255, 0.7);
-    transform:translate(-50%, -100%) rotate(0deg);       
+    transform: translate(-50%, -100%) rotate(0deg);
 }
-#minute{
+
+#minute {
     width: 3%;
     height: 40%;
     background: rgba(39, 39, 59, 0.7);
-    transform:translate(-50%, -100%) rotate(0deg);    
+    transform: translate(-50%, -100%) rotate(0deg);
 }
-#second{
+
+#second {
     width: 2%;
     height: 45%;
     background: rgb(39, 39, 59);
-    transform:translate(-50%, -100%) rotate(0deg);    
+    transform: translate(-50%, -100%) rotate(0deg);
 }
+
 @media (min-width: 200px) and (max-width:349px) {
-    #clockcontainer{
+    #clockcontainer {
         width: 80vw;
-        height: 80vw;
     }
-    .responiveFont{
+
+    .responiveFont {
         font-size: 8px;
     }
 }
+
 @media (min-width: 350px) and (max-width:449px) {
-    #clockcontainer{
+    #clockcontainer {
         width: 80vw;
-        height: 80vw;
     }
-    .responiveFont{
+
+    .responiveFont {
         font-size: 12px;
     }
 }
+
 @media (min-width: 450px) and (max-width:600px) {
-    #clockcontainer{
+    #clockcontainer {
         width: 70vw;
-        height: 70vw;
     }
-    .responiveFont{
+
+    .responiveFont {
         font-size: 16px;
     }
 }
+
 @media (min-width: 601px) and (max-width:900px) {
-    .responiveFont{
+    .responiveFont {
         font-size: 20px;
     }
 }
