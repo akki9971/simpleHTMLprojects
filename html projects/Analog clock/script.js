@@ -1,49 +1,45 @@
-setInterval(()=>{
+(function () {
 
-let x=new Date();
-let hh= x.getHours();
-let mm= x.getMinutes();
-let ss= x.getSeconds();
-let day = x.getDay();
-let date = x.getDate();
-let month = x.getMonth();
-let year = x.getFullYear();
-let musicSound = new Audio('clock-ticking.mp3');
+    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saurday"];
 
-
-let hhrotate = 30*hh + mm/2;
-let mmrotate = 6*mm + ss/10;
-let ssrotate = 6*ss;
-    
-    document.getElementById("hour").style.transform=`translate(-50%,-100%) rotate(${hhrotate}deg)` ;
-    document.getElementById("minute").style.transform=`translate(-50%,-100%) rotate(${mmrotate}deg)` ;
-    document.getElementById("second").style.transform=`translate(-50%,-100%)  rotate(${ssrotate}deg)` ;
-    musicSound.play();
-    document.getElementById("mydate").innerHTML=`${date} / ${++month} / ${year}`;
-    document.getElementById("mytime").innerHTML=`${hh} : ${mm} : ${ss}`;
-    
-    switch (day) {
-        case 0:
-            document.getElementById("myday").innerHTML="Sunday";
-            break;
-        case 1:
-            document.getElementById("myday").innerHTML="Monday";
-            break;
-        case 2:
-            document.getElementById("myday").innerHTML="Tuesday";
-            break;
-        case 3:
-            document.getElementById("myday").innerHTML="Wednesday";
-            break;
-        case 4:
-            document.getElementById("myday").innerHTML="Thursday";
-            break;
-        case 5:
-            document.getElementById("myday").innerHTML="Friday";
-            break;
-        case 6:
-            document.getElementById("myday").innerHTML="Saurday";
-            break;
-
+    function setTime(id, value) {
+        document.getElementById(id).style.transform = `translate(-50%,-100%) rotate(${value}deg)`;
+        document.getElementById(id).style.transform = `translate(-50%,-100%) rotate(${value}deg)`;
+        document.getElementById(id).style.transform = `translate(-50%,-100%)  rotate(${value}deg)`;
     }
-}, 1000);
+
+    function setHtml(id, value) {
+        document.getElementById(id).innerHTML = value;
+    }
+
+    function paddedValue(value) {
+        return value.toString().padStart(2, '0');
+    }
+
+    setInterval(() => {
+        let newDate = new Date();
+        let hh = newDate.getHours();
+        let mm = newDate.getMinutes();
+        let ss = newDate.getSeconds();
+
+        let hhrotate = 30 * hh + mm / 2;
+        let mmrotate = 6 * mm + ss / 10;
+        let ssrotate = 6 * ss;
+
+        setTime("hour", hhrotate);
+        setTime("minute", mmrotate);
+        setTime("second", ssrotate);
+        setHtml("mytime", `${paddedValue(hh)} : ${paddedValue(mm)} : ${paddedValue(ss)}`);
+        let musicSound = new Audio('clock-ticking.mp3');
+        musicSound.play();
+    }, 1000);
+
+    let newDate = new Date();
+    let day = newDate.getDay();
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+
+    setHtml('mydate', `${paddedValue(date)} - ${paddedValue(month)} - ${year}`);
+    setHtml("myday", DAYS[day]);
+})();
